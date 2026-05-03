@@ -89,6 +89,9 @@
         <div class="overlay"></div>
         <div class="side-panel people-panel hidden" data-lenis-prevent>
             <div class="panel-header">
+                <div>
+                    <span class="min-topbar" id="people-topbar"></span>
+                </div>
                 <button class="btn empty" id="close-panel"><span class="div-1"></span><span class="div-2"></span></button>
             </div>
             <div class="people-bio">
@@ -104,8 +107,12 @@
                         <div class="people-btns"></div>
                     </div>
                 </div>
-                <h1>Description</h1>
+                <h1 class="divider">Description</h1>
                 <p></p>
+                <h1 class="divider">Badges</h1>
+                <div class="badge-container">
+                    <p class="error">Something went wrong. Try again later .</p>
+                </div>
             </div>
         </div>
         <section class="section" id="team">
@@ -117,7 +124,7 @@
                     <h1 class="section-title">Key People</h1>
                     <h1 class="section-title right-align"></h1>
                 </div>
-                <div class="people-container">
+                <div class="people-container two-column">
                     <div class="people">
                         <span class="labelTag" data-added="2026-04-12T10:32:00Z">Baru</span>
                         <div class="people-bio" data-people="richi">
@@ -138,7 +145,7 @@
                             </div>
                          </div>
                     </div>
-                    <div class="people special">
+                    <div class="people span-2">
                         <span class="labelTag" data-added="2026-04-12T10:35:00Z">Baru</span>
                         <div class="people-bio" data-people="keke">
                             <div class="name">
@@ -158,12 +165,45 @@
                             
                         </div>
                     </div>
+                    <div class="people row-2">
+                        <div class="people-bio" data-people="anastasya">
+                            <div class="name">
+                                <h2></h2>
+                                <span class="nickname"></span>
+                                <h5 class="badge">Anggota Star</h5>
+                            </div>
+                            <div class="people-img">
+                                <img src="./assets/image/jessica_anastasya/jessica_anastasya.webp" />
+                            </div>
+                            <p></p>
+                            
+                        </div>
+                        <div class="people-btns">
+                            <div class="social-media">
+                                <a href="https://instagram.com/jeesxy_" target="_blank"><div class="link" data-tooltip="jeesxy_"><i class="lni lni-instagram"></i><i class="private"></i><span>jeesxy_</span></div></a>
+                                <a href="https://tiktok.com/@jjee_ess" target="_blank"><div class="link" data-tooltip="jjee_ess"><i class="lni lni-tiktok"></i><span>jjee_ess</span></div></a>
+                            </div>
+                            <div class="interaction">
+                                <div class="person-interaction-count">
+                                    <div>
+                                        <i class="lni lni-heart"></i>
+                                        <span class="like-count"></span>
+                                    </div>
+                                    <div>
+                                        <i class="uil uil-comments"></i>
+                                        <span class="comment-count"></span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="section-header medium stylish">
+                <div class="section-header medium stylish hidden">
                     <h1 class="section-title">OSCABHI</h1>
                     <h1 class="section-title right-align">2025-2026</h1>
                 </div>
-                <div class="people-container two-column">
+                <div class="people-container two-column hidden">
                     <div class="people">
                         <span class="labelTag" data-added="2026-04-12T10:32:00Z">Baru</span>
                         <div class="people-bio" data-people="hilda">
@@ -366,45 +406,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="people">
-                        <div class="people-bio" data-people="anastasya">
-                            <div class="name">
-                                <h2></h2>
-                                <span class="nickname"></span>
-                                <h5 class="badge">Anggota Star</h5>
-                            </div>
-                            <div class="people-img">
-                                <img src="./assets/image/jessica_anastasya/jessica_anastasya.webp" />
-                            </div>
-                            <p></p>
-                            
-                        </div>
-                        <div class="people-btns">
-                            <div class="social-media">
-                                <a href="https://instagram.com/jeesxy_" target="_blank"><div class="link" data-tooltip="jeesxy_"><i class="lni lni-instagram"></i><i class="private"></i><span>jeesxy_</span></div></a>
-                                <a href="https://tiktok.com/@jjee_ess" target="_blank"><div class="link" data-tooltip="jjee_ess"><i class="lni lni-tiktok"></i><span>jjee_ess</span></div></a>
-                            </div>
-                            <div class="interaction">
-                                <div class="person-interaction-count">
-                                    <div>
-                                        <i class="lni lni-heart"></i>
-                                        <span class="like-count"></span>
-                                    </div>
-                                    <div>
-                                        <i class="uil uil-comments"></i>
-                                        <span class="comment-count"></span>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
-                <div class="section-header medium stylish">
+                <div class="section-header medium stylish hidden">
                     <h1 class="section-title">Meet our</h1>
                     <h1 class="section-title right-align">Creative Member</h1>
                 </div>
-                <div class="people-container">
+                <div class="people-container hidden">
                     <div class="people">
                         <span class="labelTag" data-added="2026-04-16T10:47:00Z">Baru</span>
                         <div class="people-bio" data-people="natalia">
@@ -592,7 +600,7 @@
                 </div>          
                 <div class="section-header medium stylish">
                     <h1 class="section-title">We are</h1>
-                    <h1 class="section-title right-align">Storyteller Member</h1>
+                    <h1 class="section-title right-align">Creative Designers</h1>
                 </div>
                 <div class="people-container rtl">
                     <div class="people special">
@@ -653,7 +661,40 @@
                             
                         </div>
                     </div>
-                    
+                    <div class="people span-2">
+                        <span class="labelTag" data-added="2026-02-16T11:30:00Z">Baru</span>
+                        <div class="people-bio" data-people="chelsy">
+                            <div class="name">
+                                <h2></h2>
+                                <span class="nickname"></span>
+                                <h5 class="badge">Anggota Star</h5>
+                            </div>
+                            <div class="people-img">
+                                <img src="./assets/image/OSIS/alenta_chelsy.webp" />
+                            </div>
+                            <p></p>
+                            
+                        </div>
+                        <div class="people-btns">
+                            <div class="social-media">
+                                <a href="https://instagram.com/_ccchlsyy " target="_blank"><div class="link" data-tooltip="_ccchlsyy "><i class="lni lni-instagram"></i><i class="private"></i><span>_ccchlsyy</span></div></a>
+                                <a href="https://tiktok.com/@_inibonchel" target="_blank"><div class="link" data-tooltip="_inibonchel"><i class="lni lni-tiktok"></i><span>_inibonchel</span></div></a>
+                            </div>
+                            <div class="interaction">
+                                <div class="person-interaction-count">
+                                    <div>
+                                        <i class="lni lni-heart"></i>
+                                        <span class="like-count">53</span>
+                                    </div>
+                                    <div>
+                                        <i class="uil uil-comments"></i>
+                                        <span class="comment-count">0</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

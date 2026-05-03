@@ -1,5 +1,119 @@
+const url = "./json/peopleBio.json";
+fetch(url)
+    .then(res => res.json())
+    .then(data => {
+        const map = new Map();
+
+        document.querySelectorAll(".people-bio").forEach(el => {
+            const key = el.dataset.people;
+
+            if (!map.has(key)) {
+                map.set(key, []);
+            }
+
+            map.get(key).push(el);
+        });
+
+        data.forEach(person => {
+            const elements = map.get(String(person.id));
+            if (!elements) return;
+
+            elements.forEach(el => {
+                const container = el.closest(".people");
+
+                const name = el.querySelectorAll(".name h2");
+                const nickname = el.querySelectorAll(".name span");
+                const desc = el.querySelectorAll("p");
+                const likeBtn = container.querySelector(".people-btns .like-count");
+
+                // Handle like button
+                if (likeBtn) {
+                    const saved = parseInt(localStorage.getItem(`likeCount_${person.id}`));
+
+                    if (!isNaN(saved)) {
+                        person.like_count = saved;
+                    }
+
+                    likeBtn.textContent = person.like_count;
+
+                    if (!likeBtn.dataset.bound) {
+                        likeBtn.dataset.bound = "true";
+
+                        likeBtn.addEventListener("click", () => {
+                            const liked = likeBtn.classList.toggle("liked");
+
+                            person.like_count += liked ? 1 : -1;
+                            likeBtn.textContent = person.like_count;
+
+                            localStorage.setItem(
+                                `likeCount_${person.id}`,
+                                person.like_count
+                            );
+                        });
+                    }
+                }
+
+                // Set name
+                name.forEach(n => {
+                    n.textContent = person.name;
+                });
+
+                // Set nickname / alias
+                nickname.forEach(nick => {
+                    let text = person.nickname.replace(/&bull;/g, "/");
+
+                    if (!person.aliases?.trim()) {
+                        if (person.other_name?.trim()) {
+                            text = `${person.other_name} | ${text}`;
+                        }
+                    }
+
+                    nick.textContent = text;
+                });
+
+                // Set description
+                desc.forEach(p => {
+                    p.textContent = "";
+
+                    if (!person.description?.trim()) {
+                        p.textContent = "Tidak ada biografi";
+                        p.classList.add("empty");
+                        return;
+                    }
+
+                    const lines = person.description
+                        .replace(/&bull;/g, "•")
+                        .split("<br>");
+
+                    const fragment = document.createDocumentFragment();
+
+                    lines.forEach((line, i) => {
+                        fragment.appendChild(document.createTextNode(line.trim()));
+
+                        if (i < lines.length - 1) {
+                            fragment.appendChild(document.createElement("br"));
+                        }
+                    });
+
+                    p.appendChild(fragment);
+                });
+
+                const profileImg = container.querySelector(".people-img img");
+                const link = container.querySelector(".people-btns a");
+
+                if (profileImg) {
+                    profileImg.alt = `${person.name}'s profile picture.`;
+                }
+
+                if (link) {
+                    link.ariaLabel = `Learn more about ${person.nickname}`;
+                }
+            });
+        });
+    })
+    .catch((e) => console.error("Error fetching people JSON: ", e));
+
 document.addEventListener('DOMContentLoaded', () => {
-    
     const people = document.querySelectorAll('.people');
     const overlay = document.querySelector('.overlay');
     const url = "./json/peopleBio.json";
@@ -14,13 +128,22 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch((e) => console.error("Error fetching people JSON: ", e));
     
     const panel = document.querySelector('.people-panel');
+    const panelHeader = document.querySelector('.people-panel .panel-header');
     const nameEl = panel.querySelector('.name h2');
     const nicknameEl = panel.querySelector('.nickname');
     const desc = panel.querySelector('p');
+    const bio = panel.querySelector('.people-bio h1');
     const img = panel.querySelector('.people-img');
 
-    let activeCard = null;
+    panel.addEventListener('scroll', () => {
+        if (panel.scrollTop > ((bio.getBoundingClientRect().top - panel.getBoundingClientRect().top) / 0.5)) {
+            panelHeader.classList.add('scrolled');
+        } else {
+            panelHeader.classList.remove('scrolled');
+        }
+    })
 
+    let activeCard = null;
     
     people.forEach(card => {
         card.addEventListener('click', () => {
@@ -46,7 +169,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
             nameEl.textContent = person.name;
-            console.log(nameEl);
+            const topbarName = document.querySelector('#people-topbar');
+            if (topbarName) {
+                topbarName.textContent = person.name;
+            }
     
             let nickname = person.nickname.replace(/&bull;/g, "/");
             if (!person.aliases?.trim()) {
