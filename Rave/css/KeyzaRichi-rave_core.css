@@ -318,31 +318,30 @@ option::checkmark {
 }
 
 :root {
-    --primary-color: rgb(150, 111, 38);
-    --secondary-color: rgb(214, 166, 36);
-    --tertiary-color: rgb(211, 195, 165);
-    --background-color: rgb(255, 251, 240);
-    --bg-color-value: 255, 252, 242;
+    --primary-color: rgb(31, 31, 31);
+    --secondary-color: rgb(68, 68, 68);
+    --tertiary-color: rgb(165, 165, 165);
+    --bg-color-value: 250, 250, 250;
     --backdrop-color: rgba(var(--bg-color-value), 0.95);
-    --surface-color: rgb(255, 248, 228);
-    --surface-color-2: rgb(255, 240, 231);
-    --on-surface-color: rgb(121, 114, 99);
-    --gradient-color: linear-gradient(90deg, rgb(255, 183, 125) 0%, rgb(255, 183, 125) 50%, rgb(250, 239, 233) 100%);
+    --background-color: rgb(249, 244, 244);
+    --surface-color: rgb(252, 248, 248);
+    --on-surface-color: rgb(119, 119, 119);
+    --gradient-color: linear-gradient(90deg, rgb(68, 68, 68) 0%, rgb(145, 145, 145) 50%, rgb(235, 235, 235) 100%);
+    --bg-icon-color: rgba(212, 212, 212, 0.2);
     --conic-gradient: conic-gradient(from var(--angle), #361d00, #FF5A00, #361d00);
-    --bg-icon-color: rgba(216, 170, 117, 0.151);
-    --text-color: #000000;
+    --text-color: rgb(0, 0, 0);
     color-scheme: light dark;
 }
 
 :root.dark-mode,
 html[data-theme="dark"] {
-    --primary-color: rgb(255, 206, 114);
-    --background-color: rgb(12, 8, 0);
-    --surface-color: rgb(22, 15, 0);
-    --text-color: #ffffff;
-    --on-surface-color: rgb(179, 164, 134);
-    --bg-color-value: 17, 12, 0;
-    --bg-icon-color: rgba(65, 65, 65, 0.219);
+   --primary-color: rgb(255, 255, 255);
+    --secondary-color: rgb(122, 122, 122);
+    --background-color: rgb(10, 10, 10);
+    --surface-color: rgb(15, 15, 15);
+    --on-surface-color: rgb(124, 124, 124);
+    --bg-color-value: 20, 20, 20;
+    --text-color: white;
     color-scheme: dark;
 }
 
@@ -2741,7 +2740,6 @@ div {
     grid-auto-rows: auto;
     grid-auto-flow: dense;
     justify-content: center;
-    overflow: hidden;
     padding: 20px 10px 40px 26px;
     column-gap: 2.4vw;
     row-gap: 2.2vw;
@@ -5305,7 +5303,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 0px 2.3em 40px 2.3em;
+    padding: 10px 2em 40px 2em;
 }
 
 .side-panel .people-info {
@@ -6207,6 +6205,7 @@ footer a:hover {
     }
     .people-container.rtl, .people-container.two-column {
         grid-template-columns: repeat(1, 1fr);
+        padding: 0px 10px 26px 10px;
         direction: ltr;
     }
     .logo {
