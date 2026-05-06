@@ -5242,7 +5242,6 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     overflow-y: auto;
     overscroll-behavior: auto;
     will-change:transform;
-    transition: border .8s cubic-bezier(0.075, 0.82, 0.165, 1);
     animation: fadeInRight .8s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .side-panel #people-topbar {
@@ -6585,6 +6584,10 @@ footer a:hover {
     .side-panel {
         inset: 0;
         width: 100%;
+        animation: fadeInUp .8s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    .side-panel .people-bio * {
+        animation: none;
     }
     .side-panel .people-info {
         flex-direction: column;
