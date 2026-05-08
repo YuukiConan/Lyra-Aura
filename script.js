@@ -4,7 +4,7 @@ import Rave, { Security } from "./Rave/js/Rave.js";
 const richi = Rave ? new Rave("UI Minimalist", "keyzarichi.org") : null;
 const security = Security ? new Security('1.1', "Keyza Richi") : null;
 
-richi.setHeadTagType("icon", "./assets/logo/keyzarichi.org_scriptsimple-200w.webp");
+richi.setHeadTagType("icon", "./assets/logo/Lyra_simple.webp");
 
 
 document.addEventListener('DOMContentLoaded', () => {

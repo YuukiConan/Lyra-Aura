@@ -5320,7 +5320,6 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     display: flex;
     flex-direction: row;
     gap:2em;
-    animation: fadeInRight .6s cubic-bezier(0.075, 0.82, 0.165, 1);
     margin-top: 30px;
     padding-right: 20px;
 }
@@ -5372,12 +5371,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     margin: 0px 0;
 }
 
-.side-panel h1 {
-    animation: fadeInRight .8s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
 .side-panel p {
-    animation: fadeInRight 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 27px;
@@ -6389,7 +6383,7 @@ footer a:hover {
     }
 
     to {
-        transform: translateY(20px);
+        transform: translateY(50px);
         opacity: 0;
         border-radius: 0;
     }
