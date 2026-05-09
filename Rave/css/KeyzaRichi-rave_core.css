@@ -101,58 +101,6 @@
     }
 }
 
-@font-face {
-    font-family: 'Open-Dyslexic';
-    src: url("./fonts/OpenDyslexic-Regular.otf") format('opentype');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Lineicons';
-    src: url('./fonts/Lineicons.woff2') format('woff2');
-    font-display: swap;
-    /* Or optional */
-}
-
-.lni {
-    font-family: "Lineicons";
-}
-
-@font-face {
-    font-family: 'unicons-17';
-    src: url('/fonts/line/unicons-17.woff2') format('woff2');
-    font-display: swap;
-    /* Or optional */
-}
-
-@font-face {
-    font-family: 'unicons-0';
-    src: url('/fonts/line/unicons-0.woff2') format('woff2');
-    font-display: swap;
-    /* Or optional */
-}
-
-@font-face {
-    font-family: 'unicons-13';
-    src: url('/fonts/line/unicons-13.woff2') format('woff2');
-    font-display: swap;
-    /* Or optional */
-}
-
-@font-face {
-    font-family: 'unicons-4';
-    src: url('/fonts/line/unicons-4.woff2') format('woff2');
-    font-display: swap;
-    /* Or optional */
-}
-
-@font-face {
-    font-family: 'unicons-18';
-    src: url('/fonts/line/unicons-18.woff2') format('woff2');
-    font-display: swap;
-    /* Or optional */
-}
-
 /* ======Universal====== */
 * {
     appearance: none;
@@ -410,7 +358,7 @@ html[data-theme="light"] {
 }
 
 :root.dark-mode .mono .slider::before,
-:root.dark-mode .mono input[type=checkbox]:checked+.slider::before {
+:root.dark-mode .mono input[type=checkbox]:checked+.slider::before, :root.dark-mode .hamburger .equal div {
     background-color: white;
 }
 
@@ -4707,21 +4655,6 @@ header * {
     isolation: auto !important;
 }
 
-.header-desktop {
-    width: 100%;
-    display: flex;
-    mix-blend-mode: difference;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header-mobile {
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    transition: opacity .6s;
-}
-
 #float-button {
     position: fixed;
     right: 4.6% !important;
@@ -4848,8 +4781,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     object-fit: cover;
     opacity: 1;
     transform: translateY(0px);
-    transition: opacity .3s cubic-bezier(0.075, 0.82, 0.165, 1), transform .3s cubic-bezier(0.075, 0.92, 0.403, 1);
-    filter: invert();
+    transition: opacity .3s cubic-bezier(0.075, 0.82, 0.403, 1), transform .3s cubic-bezier(0.075, 0.92, 0.403, 1);
 }
 
 
@@ -4904,7 +4836,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 }
 :root.dark-mode .actions .navBtn, :root.dark-mode .navBtn {
     color: white;
-    filter: invert(0)
+    filter: invert(0);
 }
 
 .navBtn::after {
@@ -5450,7 +5382,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     height: 3px;
     border-radius: 100px;
     top: 0px;
-    background-color: white;
+    background-color: black;
     transition: all .4s cubic-bezier(1, 0, 0, 1);
 }
 
