@@ -6594,8 +6594,8 @@ footer a:hover {
     }
     .side-panel .people-img img {
         width: 100%;
-        height: 420px;
-        aspect-ratio: 1/1;
+        height: 470px;
+        aspect-ratio: 3/4;
     }
 
     .statistics {
