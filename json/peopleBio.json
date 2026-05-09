@@ -43,7 +43,7 @@
         "description": "Mentor Forum Anak Kab. Kediri &bull; web developer<br><br>Yosia sering berkolaborasi dengan Richi di acara tertentu, seperti sebagai MC MPLS atau fashion show.<br><br>Yosia is a talented web developer and mentor for the Forum Anak Kab. Kediri, where he provides guidance and support to young people in the community. He has a passion for technology and is dedicated to helping others learn and grow in the field of web development. Yosia's expertise and mentorship have made him a valuable asset to the Keyza Richi team, where he contributes his skills to help create an engaging and user-friendly website.",
         "nickname": "Yosia",
         "id": "yosia",
-        "image": "./assets/image/yosia/yosia.webp",
+        "image": "./assets/image/yosia/yosia-nobg.png",
         "instagram": [
             "yosiaapratama_"
         ],
@@ -56,7 +56,7 @@
         "description": "Yuuki’s new assistant developer • actress • model <br><br>Nia often helps Yuuki test new features in Keyza Richi before they’re released to the public. <br><br>In addition to her work as a developer, Nia is also an actress and model, known for her captivating performances and stunning looks. With her unique blend of technical expertise and creative talent, Nia is a valuable asset to the Keyza Richi team and a rising star in the entertainment industry.",
         "nickname": "Nia &bull; Neta",
         "id": "anneta",
-        "image": "./assets/image/nathania_anneta/Nia_avatar.webp",
+        "image": "./assets/image/nathania_anneta/Nia_avatar-nobg.png",
         "aliases": "It's Anneta!",
         "instagram": [
             "niaapayy",
@@ -130,7 +130,7 @@
         "name": "Alenta Chelsy Ramadhani",
         "description": "Student Council members working with Richi in the graphics department. <br><br>Chelsy is known for her analytical and structured approach to design, often creating visually stunning graphics that are both aesthetically pleasing and highly functional. With her keen eye for detail and her ability to think outside the box. <br><br>In addition, Chelsy has a close friendship with Jessica Anastasya (Jessy), often meet up and make some experiments together. Her creativity and dedication to her craft have made her an invaluable member of the Lyra Aura team, where she contributes her unique perspective and creative energy to help bring the website to life with visually stunning graphics and captivating content.",
         "nickname": "Chelsy",
-        "image": "./assets/image/OSIS/alenta_chelsy.webp",
+        "image": "./assets/image/OSIS/alenta_chelsy-nobg.png",
         "id": "chelsy",
         "instagram": [
             "__ccchlsyy"
@@ -191,7 +191,7 @@
         "name": "Keisya Ayu Audora Salsabela",
         "description": "A badminton player and developer at Lyra Aura. Keisya is often described as a “woman with hidden strength” because she works entirely behind the scenes on software design. <br><br>Several months ago, Keisya was temporarily absent from the team due to her focus on badminton, but she has since returned to contribute her skills and expertise to the development of Lyra Aura. With her dedication and hard work, Keisya continues to be an invaluable member of the team, helping to create a better user experience for everyone who visits the website.",
         "nickname": "Keke &bull; Keisya",
-        "image": "./assets/image/keisya_ayu/Keke_1.webp",
+        "image": "./assets/image/keisya_ayu/Keke_2.webp",
         "id": "keke"
     }, {
         "name": "Natalia Jessica Lisianto",
@@ -221,7 +221,7 @@
         "description": "Fini Charisa is an UI/UX designer, content creator, and contributor to Lyra Aura who is completely dedicated to creating a better user experience for everyone. <br>With her keen eye for design and user-centric approach, Fini is an invaluable asset to the team, ensuring that every aspect of the website is not only visually appealing but also intuitive and user-friendly. <br> <br>In 2025, Fini was invited by Google Indonesia to speak at the Google I/O Extended event in Jakarta, where she shared her insights on UI/UX design and her experience working as a UI/UX designer. Her dedication to creating a better user experience has made her an integral part of the team and a respected figure in the design community.",
         "nickname": "Fini",
         "aliases": "",
-        "image": "./assets/image/member_avatar/fini_charisa.webp",
+        "image": "./assets/image/member_avatar/fini_charisa-nobg.png",
         "id": "fini",
         "instagram": [
             
@@ -233,7 +233,7 @@
         "description": "Aqueena is a talented fashion designer and content creator who contributes to Lyra Aura with her creative designs and engaging content. With her passion for art and design, Aqueena helps bring the website to life with visually stunning graphics and captivating content that resonates with the audience. <br><br>In 2025, Aqueena won the prestigious Putri Batik Kab. Kediri at first place, showcasing her exceptional talent and creativity in the world of fashion design. Her dedication to her craft and her ability to create unique and beautiful designs have made her an invaluable member of the Lyra Aura team and a rising star in the fashion industry.",
         "nickname": "Aqueena",
         "aliases": "",
-        "image": "./assets/image/member_avatar/aqueena.webp",
+        "image": "./assets/image/member_avatar/aqueena-nobg.png",
         "id": "aqueena",
         "instagram": [
             

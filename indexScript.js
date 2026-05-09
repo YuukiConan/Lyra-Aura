@@ -58,8 +58,8 @@ richi.intersectElements(timeline, timelineItems, "translateY", 10);
 richi.intersectElements(features, featuresItem, "translateY", 50);
 // richi.intersectElements(sectionTitle, sectionTitleCtr, "translateY", 50);
 // richi.intersectElements(main, sections, "translateY", 100);
-// richi.animateOnScroll('.people', {
-//     target: '.people *',
-//     stagger: 0.09
-// })
+richi.animateOnScroll('.people', {
+    target: '.people *',
+    stagger: 0.09
+})
 richi.animateCounter();
