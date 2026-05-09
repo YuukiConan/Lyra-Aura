@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('pageshow', (e) => {
         if (e.persisted) {
-            console.log("Keyza Richi's website - v1.28")
+            console.log("Lyra Aura Beta Stage 1")
         }
     })
 
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dataTitle = document.body.getAttribute('data-title');
     if (dataTitle) {
-        document.title = dataTitle + ' - keyzarichi.org';
+        document.title = dataTitle + ' - Lyra Aura';
     }
 })
 

@@ -20,38 +20,37 @@ fetch(url)
 
             elements.forEach(el => {
                 const container = el.closest(".people");
-
                 const name = el.querySelectorAll(".name h2");
                 const nickname = el.querySelectorAll(".name span");
                 const desc = el.querySelectorAll("p");
-                const likeBtn = container.querySelector(".people-btns .like-count");
+                // const likeBtn = container.querySelector(".people-btns .like-count");
 
                 // Handle like button
-                if (likeBtn) {
-                    const saved = parseInt(localStorage.getItem(`likeCount_${person.id}`));
+                // if (likeBtn) {
+                //     const saved = parseInt(localStorage.getItem(`likeCount_${person.id}`));
 
-                    if (!isNaN(saved)) {
-                        person.like_count = saved;
-                    }
+                //     if (!isNaN(saved)) {
+                //         person.like_count = saved;
+                //     }
 
-                    likeBtn.textContent = person.like_count;
+                //     likeBtn.textContent = person.like_count;
 
-                    if (!likeBtn.dataset.bound) {
-                        likeBtn.dataset.bound = "true";
+                //     if (!likeBtn.dataset.bound) {
+                //         likeBtn.dataset.bound = "true";
 
-                        likeBtn.addEventListener("click", () => {
-                            const liked = likeBtn.classList.toggle("liked");
+                //         likeBtn.addEventListener("click", () => {
+                //             const liked = likeBtn.classList.toggle("liked");
 
-                            person.like_count += liked ? 1 : -1;
-                            likeBtn.textContent = person.like_count;
+                //             person.like_count += liked ? 1 : -1;
+                //             likeBtn.textContent = person.like_count;
 
-                            localStorage.setItem(
-                                `likeCount_${person.id}`,
-                                person.like_count
-                            );
-                        });
-                    }
-                }
+                //             localStorage.setItem(
+                //                 `likeCount_${person.id}`,
+                //                 person.like_count
+                //             );
+                //         });
+                //     }
+                // }
 
                 // Set name
                 name.forEach(n => {
@@ -134,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const desc = panel.querySelector('p');
     const bio = panel.querySelector('.people-bio h1');
     const img = panel.querySelector('.people-img');
+    const badges = panel.querySelector('.badge-container');
 
     panel.addEventListener('scroll', () => {
         if (panel.scrollTop > ((bio.getBoundingClientRect().top - panel.getBoundingClientRect().top) / 0.5)) {
@@ -232,6 +232,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 p.textContent = "No social media are available for this member.";
                 panelBtns.appendChild(p);
             }
+
+            const badgesArray = person.badges;
+            badges.textContent = '';
+            
+            if (badgesArray && badgesArray.length > 0) {
+                badgesArray.map(badge => {
+
+                    const category = document.createElement('div');
+                    category.classList.add('badge');
+                    category.textContent = badge;
+                    
+                    badges.appendChild(category);
+                }) 
+            } else {
+                badges.textContent = `No badges for ${person.nickname.replace(/&bull;/g, "/")}`;
+            }
+
         })
     })
     

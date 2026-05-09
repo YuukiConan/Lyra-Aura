@@ -12,17 +12,24 @@
         "name": "Keyza Medina Richi Sherlya Fanda",
         "description": "Keyza Richi is a main character of this website who will guide you to make your interior design more beautiful and creative. <br><br>Richi is a talented and creative individual who has a passion for interior design and fashion. With her unique sense of style and eye for detail, Richi has become a beloved figure in the world of design, inspiring others with her innovative ideas and captivating content. As the main character of Lyra Aura, Richi serves as a guide and source of inspiration for visitors, helping them to explore their own creativity and discover new ways to express themselves through design.",
         "nickname": "Richi",
+        "badges": [
+            "Queen of Branding",
+            "Creative Leader"
+        ],
         "image": "./assets/image/keyza_richi/richi_4.webp",
         "id": "richi",
         "like_count": 0,
         "comment_count": 0
     },
     {
-        "name": "Jessica Anastasya Oktafiana",
+        "name": "Jessica Anastasya Oktaviana",
         "description": "The Student Council Coordinator <br> <br> Along with Richi, Jessy is also a member of the Scouts and Pasbhirawa at SMK Canda Bhirawa Pare. She is the originator of the main idea that is loved on this website: PeopleCard. <br><br>Jessy has a close relationship with Richi, often collaborating on various projects and events. Her creativity and organizational skills have made her an invaluable member of the team, contributing to the success of Lyra Aura and its engaging content.",
         "nickname": "Jessy",
         "image": "./assets/image/jessica_anastasya/jessica_anastasya.webp",
         "id": "anastasya",
+        "badges": [
+            "Game Changer"
+        ],
         "instagram": [
             "jeesxy_"
         ],
@@ -237,6 +244,9 @@
         "description": "~ note: this is just a zodiac joke.<br>An Aquarius woman who is actually gentle and a little shy on the outside, relies on her powers of observation to think logically over feelings based on facts. She is friends with Jessica Anastasya. <br>---<br><br>Her story is begin in 2025, when Lusiana joined the English Club at her school, where she quickly became known for her keen observational skills and logical thinking. Despite her gentle and shy demeanor, Lusiana's ability to analyze situations based on facts rather than emotions has made her a valuable member of the club and a trusted friend to Jessica Anastasya. <br><br>Also, Lusiana has contributed to Lyra Aura with TopBar and Snackbar, helping to enhance the user experience and create a more engaging website for visitors. This significantly improved the website's functionality and user interface, as before these elements were introduced, developer often use old toast notification which is less interactive and visually appealing.",
         "nickname": "Lusi",
         "aliases": "",
+        "badges": [
+            "Game Changer"
+        ],
         "image": "./assets/image/member_avatar/lusiana.webp",
         "id": "lusiana",
         "instagram": [

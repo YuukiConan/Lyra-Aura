@@ -190,7 +190,7 @@ select {
     border-radius: 50px;
     outline: none;
     transition: border .2s cubic-bezier(0.075, 0.82, 0.165, 1);
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 select::after {
@@ -266,29 +266,28 @@ option::checkmark {
 }
 
 :root {
-    --primary-color: rgb(31, 31, 31);
-    --secondary-color: rgb(68, 68, 68);
-    --tertiary-color: rgb(165, 165, 165);
-    --bg-color-value: 250, 250, 250;
+    --primary-color: rgb(179, 130, 98);
+    --secondary-color: rgb(99, 43, 53);
+    --tertiary-color: rgb(236, 198, 216);
+    --background-color: rgb(255, 244, 241);
+    --bg-color-value: 255, 252, 245;
     --backdrop-color: rgba(var(--bg-color-value), 0.95);
-    --background-color: rgb(249, 244, 244);
-    --surface-color: rgb(252, 248, 248);
-    --on-surface-color: rgb(105, 105, 105);
-    --gradient-color: linear-gradient(90deg, rgb(68, 68, 68) 0%, rgb(145, 145, 145) 50%, rgb(235, 235, 235) 100%);
-    --bg-icon-color: rgba(212, 212, 212, 0.2);
-    --conic-gradient: conic-gradient(from var(--angle), #361d00, #FF5A00, #361d00);
-    --text-color: rgb(0, 0, 0);
+    --surface-color: rgb(252, 243, 230);
+    --on-surface-color: rgb(105, 95, 86);
+    --gradient-color: linear-gradient(90deg, rgba(233, 159, 110, 0.822) 0%, rgb(255, 183, 125) 50%, rgb(250, 243, 233) 100%);
+    --conic-gradient: conic-gradient(from var(--angle), rgb(196, 224, 74), rgb(168, 184, 76), rgb(221, 221, 221));
+    --bg-icon-color: rgba(216, 153, 117, 0.151);
+    --text-color: rgb(19, 14, 1);
     color-scheme: light dark;
 }
 
 :root.dark-mode,
 html[data-theme="dark"] {
-   --primary-color: rgb(255, 255, 255);
-    --secondary-color: rgb(122, 122, 122);
-    --background-color: rgb(10, 10, 10);
-    --surface-color: rgb(15, 15, 15);
-    --on-surface-color: rgb(196, 196, 196);
-    --bg-color-value: 20, 20, 20;
+    --background-color: rgb(34, 26, 21);
+    --primary-color: rgb(202, 147, 111);
+    --surface-color: rgb(37, 26, 21);
+    --bg-color-value: 27, 23, 21;
+    --on-surface-color: rgb(172, 149, 114);
     --text-color: white;
     color-scheme: dark;
 }
@@ -418,7 +417,7 @@ html[data-theme="light"] {
     --primary-color: rgb(179, 130, 98);
     --secondary-color: rgb(99, 43, 53);
     --tertiary-color: rgb(236, 198, 216);
-    --background-color: rgb(253, 244, 223);
+    --background-color: rgb(255, 244, 241);
     --bg-color-value: 255, 252, 245;
     --backdrop-color: rgba(var(--bg-color-value), 0.95);
     --surface-color: rgb(252, 243, 230);
@@ -467,7 +466,7 @@ html {
     scroll-behavior: initial;
     background-color: var(--background-color) !important;
     color: var(--text-color);
-    font-family: Raleway, sans-serif;
+    font-family: Inter, 'DM Sans', sans-serif;
 }
 
 /* Mode gelap */
@@ -526,7 +525,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Raleway, sans-serif !important;
+    font-family: Manrope, sans-serif !important;
     margin: 4px 0 4px 0;
 }
 
@@ -594,7 +593,7 @@ dialog .dialog-topbar {
 }
 
 .dialog-topbar h1 {
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
     font-size: 5rem !important;
     font-weight: 500;
 }
@@ -635,7 +634,7 @@ dialog .dialog-topbar {
 }
 
 .dialog-header h1 {
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
 }
 
 dialog .content {
@@ -692,7 +691,7 @@ hr {
 }
 
 p {
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 18px;
 }
 
@@ -740,7 +739,7 @@ ul li {
 
 .content-blurred p {
     font-size: 18px;
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 :root.dark-mode .content-blurred {
@@ -1011,11 +1010,11 @@ ul li {
     padding: 4px 12px;
     border-radius: 50px;
     font-weight: 600;
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
 }
 
 .time-condition {
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
     margin: 5px 0;
     font-size: 16px;
     font-weight: 400;
@@ -1070,7 +1069,7 @@ ul li {
 .sidebar-btn span {
     font-size: 15px;
     display: none;
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     animation: fadeInLeft .6s cubic-bezier(1, 0, 0, 1);
 }
 
@@ -1435,7 +1434,7 @@ code {
 .btn.large {
     padding: 12px 20px;
     font-size: 17px;
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 .btn.xl {
@@ -1499,7 +1498,7 @@ code {
 /* Konten */
 body.dyslexia :is(p, h1, h2, h3, h4, h5, h6, span, a) {
     font-family: 'Open-Dyslexic', sans-serif !important;
-    font-size: 14px !important;
+    font-size: 20px !important;
 }
 
 .tab-container {
@@ -1537,7 +1536,7 @@ body.dyslexia :is(p, h1, h2, h3, h4, h5, h6, span, a) {
     height: 100%;
     margin: 0px;
     color: rgb(128, 128, 128);
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
 }
 
@@ -1639,7 +1638,7 @@ body.dyslexia :is(p, h1, h2, h3, h4, h5, h6, span, a) {
     padding: 8px 12px;
     cursor: pointer;
     color: rgb(100, 100, 100);
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     transition: color .4s cubic-bezier(0.075, 0.82, 0.165, 1), padding .4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -1672,7 +1671,6 @@ div {
 .intro {
     position: relative;
     width: 100%;
-    padding: 3% 0 0px 0 !important;
     transition: none;
 }
 
@@ -1745,8 +1743,17 @@ div {
     border-bottom: none;
 }
 
+.section-header.stylish .section-title {
+    text-align: left;
+}
+
 .section-header.stylish .section-title.right-align {
     text-align: right;
+}
+
+.marker-highlight {
+    padding: 0px 20px;
+    background-color: var(--bg-icon-color);
 }
 
 .section-header.large {
@@ -1765,7 +1772,7 @@ div {
     font-size: 3.5rem;
     font-weight: 500;
     margin: 0 30px 10px 30px;
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
 }
 
 .section-title.small {
@@ -1776,7 +1783,7 @@ div {
 }
 
 .section-desc {
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1.1rem;
     line-height: 29px;
     margin: 6px 40px 30px 40px;
@@ -1792,10 +1799,6 @@ div {
 
 .hero-section {
     text-align: center;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 10px 0 10px 0;
 }
 
 .hero-caption {
@@ -1803,7 +1806,6 @@ div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
     transition: none !important;
 }
 
@@ -1812,14 +1814,14 @@ div {
     font-weight: 600;
     line-height: 1.1em;
     max-width: 85%;
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
 }
 
 .hero-section p {
     font-size: 16px;
     line-height: 26px;
     width: 50%;
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 .statistics {
@@ -1834,7 +1836,7 @@ div {
 .statistics span {
     font-size: 16px;
     margin-top: 12px;
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     color: rgb(70, 70, 70);
 }
 
@@ -1905,7 +1907,7 @@ div {
 }
 
 .social-media span {
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     z-index: 0;
     color: #909090;
     padding: 8px;
@@ -1954,8 +1956,7 @@ div {
 
 @media (max-width: 1024px) {
     .intro {
-        height: auto !important;
-        padding: 4em 0 0 0 !important;
+        padding: 3.5em 0 20px 0 !important;
     }
 
     .hero {
@@ -1998,8 +1999,7 @@ div {
     }
 
     .section-desc {
-        margin: 20px 2.5em;
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
@@ -2039,7 +2039,7 @@ div {
     font-size: 24px;
     margin: 0 3px 10px 3px;
     color: var(--primary-color) !important;
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
     font-weight: 500;
 }
 
@@ -2137,7 +2137,6 @@ div {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     min-width: 100% !important;
     gap: 24px;
     z-index: 0;
@@ -2252,7 +2251,7 @@ div {
 }
 
 .flex-box-number span {
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 32px;
     color: var(--primary-color);
 }
@@ -2339,7 +2338,7 @@ div {
     display: flex;
     justify-content: flex-start;
     font-size: 15px;
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 300;
 }
 
@@ -2468,7 +2467,7 @@ div {
     font-size: 3rem;
     margin-bottom: 10px;
     color: inherit !important;
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
 }
 
 .flex-box-desc p {
@@ -2625,7 +2624,7 @@ div {
     width: 100%;
     padding: 30px 1em;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: left;
     gap: 3em;
@@ -2637,7 +2636,7 @@ div {
 }
 
 .timeline-item-header {
-    width: 500px;
+    width: 450px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -2646,7 +2645,7 @@ div {
 
 .timeline-item-header h1 {
     font-weight: 400;
-    font-size: 2.6rem;
+    font-size: 3rem;
     width: 100%;
     animation: fadeInDown .4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -2665,12 +2664,12 @@ div {
 
 .timeline-item-content {
     padding: 20px 2em;
-    max-width: 620px;
+    max-width: 650px;
 }
 
 .timeline-item-content h1 {
     font-weight: 300;
-    font-size: 23px;
+    font-size: 34px;
     line-height: 40px;
     animation: fadeInDown .4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -2740,7 +2739,7 @@ div {
 .people .people-img {
     object-fit: cover;
     width: 370px;
-    height: 430px;
+    height: 400px;
     margin: 5px 0px 8px 0px;
     background: rgba(100, 100, 100, 0.05) url('/assets/logo/keyzarichi.org-200w.webp') no-repeat;
     background-position: center center;
@@ -2756,7 +2755,7 @@ div {
 
 .people .people-img img {
     object-fit: cover;
-    width: 100%;
+    width: 370px;
     height: 100%;
     object-position: center 15%;
     background-color: var(--bg-icon-color);
@@ -2790,8 +2789,8 @@ div {
 .people .name h2 {
     color: var(--text-color);
     font-size: 18px;    
-    font-family: Raleway, sans-serif;
-    font-weight: 600;
+    font-family: Inter, sans-serif !important;
+    font-weight: 450;
     
 }
 
@@ -2819,7 +2818,7 @@ div {
 }
 
 .people .people-bio p {
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 16px;
     line-height: 26px;
     overflow: hidden;
@@ -2937,16 +2936,15 @@ div {
     margin-bottom: 10px;
 }
 
-.people .people-bio .badge {
+.badge {
     color: var(--text-color);
-    font-weight: 500;
+    font-weight: 450;
     word-spacing: normal;
-    font-size: 15px;
-    display: none;
-    background-color: rgba(100, 100, 100, 0.1);
+    font-size: 17px;
+    background-color: var(--bg-icon-color);
     border-radius: 50px;
     margin: 10px 0 10px 0px;
-    padding: 5px 16px;
+    padding: 12px 24px;
 }
 
 .people.new .people-bio .badge {
@@ -3316,7 +3314,7 @@ div {
 
 .accordion-tab h2 {
     display: inline !important;
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
     margin: 5px 0 0px 0;
     font-weight: 600;
 }
@@ -3325,7 +3323,7 @@ div {
     margin: 5px 0;
     font-size: 14px;
     word-spacing: 2px;
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 .settings {
@@ -3385,7 +3383,7 @@ div {
 }
 
 .accordion-content h2 {
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 400;
 }
 
@@ -3422,7 +3420,7 @@ details[open] .accordion-header::after {
 
 .accordion-item-title {
     font-size: 20px;
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
     font-weight: 600;
     margin: 2px 20px 8px 0;
     width: 100%;
@@ -3432,7 +3430,7 @@ details[open] .accordion-header::after {
 
 .accordion-item-desc {
     font-size: 16px;
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 500;
     margin: 2px 0;
     line-height: 20px !important;
@@ -3512,7 +3510,7 @@ input[type="search"] {
     border-radius: 20px;
     padding: 24px 1em 24px 1.2em;
     outline: none;
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     ;
 }
 
@@ -3568,7 +3566,7 @@ input[type=search]::-webkit-search-cancel-button {
 label {
     display: inline-flex !important;
     font-weight: 600;
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 .checkbox:checked {
@@ -3589,7 +3587,7 @@ textarea {
     height: 30px;
     font-size: 16px;
     outline: none;
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     transition: .2s;
 }
 
@@ -3682,7 +3680,7 @@ input[type=range]::-moz-range-track {
 }
 
 .caption-title {
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
     font-weight: 500;
     font-size: 25px;
     margin: 0 0 5px 0 !important;
@@ -3693,7 +3691,7 @@ input[type=range]::-moz-range-track {
 .caption .caption-desc {
     margin: 0 0 20px 0;
     font-size: 14px;
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     transition: .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -3764,7 +3762,7 @@ input[type=range]::-moz-range-track {
     text-transform: uppercase;
     font-size: 30px;
     color: inherit !important;
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
     margin: 0px 0 20px 0;
 }
 
@@ -3872,13 +3870,13 @@ input[type=range]::-moz-range-track {
 }
 
 .caption-title {
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
     font-size: 2rem;
     margin: 10px 2px;
 }
 
 .caption-subtitle {
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
     opacity: 0.9;
@@ -3948,7 +3946,7 @@ input[type=range]::-moz-range-track {
 }
 
 .article .article-header {
-    margin: 2em 0 2em 0;
+    margin: 15dvh 0 2em 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
@@ -3973,14 +3971,13 @@ input[type=range]::-moz-range-track {
 
 .title-container {
     width: 80%;
-    padding: 3em 0em 6em 0em;
+    padding: 6em 0em 6em 0em;
     border-radius: 0 0 20px 20px;
 }
 
 .article-title {
     font-size: 3.5rem;
     margin: 30px 0 0px 0;
-    text-shadow: 1px 1px 1px #555;
 }
 
 .article .content {
@@ -3999,7 +3996,7 @@ input[type=range]::-moz-range-track {
 }
 
 .article .content p {
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 19px;
     font-weight: 400;
     line-height: 27px;
@@ -4170,7 +4167,7 @@ input[type=checkbox]:checked+.slider::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     border: 2px solid transparent;
     transition: .6s cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor: pointer;
@@ -4648,7 +4645,7 @@ input[type=checkbox]:checked+.slider::before {
 /* Header  */
 header * {
     user-select: none;
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 .header, header, .header-desktop, .header-container {
@@ -4780,6 +4777,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     opacity: 1;
+    filter: invert(1);
     transform: translateY(0px);
     transition: opacity .3s cubic-bezier(0.075, 0.82, 0.403, 1), transform .3s cubic-bezier(0.075, 0.92, 0.403, 1);
 }
@@ -4821,13 +4819,13 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     background-color: transparent;
     border: 1px solid transparent;
     width: fit-content;
-    font-size: 14px;
+    font-size: 16px;
     color: black;
     cursor: pointer;
     padding: 12px 12px;
     filter: invert(1);
     border-radius: 25px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
 }
 
@@ -4868,7 +4866,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 }
 
 .navBtn a {
-    font-family: Raleway, sans-serif !important;
+    font-family: Manrope, sans-serif !important;
     color: inherit !important;
     display: inline-block;
     padding: 12px 4px;
@@ -4884,7 +4882,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 }
 
 .navBtn .promo.small {
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
     position: absolute;
     top: unset;
     bottom: 0;
@@ -5018,7 +5016,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     margin: 0 0px 0px 0;
     transition: all .5s;
     animation: fadeInDown .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    font-family: "Open Sans", sans-serif !important;
+    font-family: Inter, sans-serif !important;
     position: relative;
 }
 
@@ -5174,11 +5172,12 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     visibility: hidden;
     font-weight: 600;
     font-size: 24px;
+    color: var(--text-color);
     transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1), background-color .6s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .divider {
-    font-size: 32px !important;
-    color: var(--on-surface-color)
+    margin: 0;
+    font-size: 24px !important;
 }
 .panel-header.scrolled #people-topbar {
     opacity: 1;
@@ -5282,7 +5281,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 .side-panel .name h2 {
     color: var(--text-color);
     font-size: 28px;
-    font-family: Raleway, sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 600;
 }
 
@@ -5296,8 +5295,12 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     margin: 0px 0;
 }
 
+.side-panel .badge-container {
+    display: flex; gap: 16px;
+}
+
 .side-panel p {
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 16px;
     line-height: 27px;
     font-weight: 450;
@@ -5332,7 +5335,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     height: 55px;
     position: relative;
     top: -3px;
-    left: -3px;
+    left: -7px;
     margin-left: 0px;
     font-size: 16px !important;
 }
@@ -5346,16 +5349,26 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     width: 0px !important;
     opacity: 0;
 }
-
-.hamburger.active .equal div {
+.hamburger.active .equal {
+    gap: 0;
+}
+.hamburger.active .equal .div1 {
+    transform: rotate(42deg);
+    top: 1px;
     background-color: var(--primary-color) !important;
 }
 
 .hamburger.active .equal .div2 {
-    background-color: var(--secondary-color) !important;
+    opacity: 0;
+    display: none;
+}
+
+.hamburger:not(.active) .equal .div2 {
+    animation: fadeInLeft .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .hamburger.active .equal .div3 {
+    transform: rotate(-43deg);
     background-color: var(--tertiary-color) !important;
 }
 
@@ -5366,32 +5379,36 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 .equal {
     width: 32px;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
     flex-direction: column;
-    gap: 6px;
+    align-items: flex-end;
     padding: 5px 2px;
+    gap: 8px;
     position: relative;
     transform: scale(1.25);
-    left: 3px;
+    transition: opacity .3s cubic-bezier(0.075, 0.82, 0.165, 1), transform .5s cubic-bezier(1, 0, 0, 1);
 }
 
 .equal div {
     position: relative;
-    width: 33px;
-    height: 3px;
-    border-radius: 100px;
+    width: 37px;
+    height: 2px;
     top: 0px;
-    background-color: black;
+    background-color: white;
     transition: all .4s cubic-bezier(1, 0, 0, 1);
 }
 
-.equal .div2 {
-    width: 18px;
+.equal .div1 {
+    width: 35px;
 }
-
-.equal .div3 {
-    width: 26px;
+.equal .div2 {
+    width: 22px;
+}
+.hamburger.active .equal div {
+    filter: invert(1);
+    width: 37px !important;
+}
+.hamburger.active .equal .div1 {
+    width: 37px !important;
 }
 
 .hamburger span {
@@ -5513,7 +5530,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     color: var(--text-color);
     transform: translateY(40px);
     transition: opacity .3s cubic-bezier(0.075, 0.82, 0.165, 1), transform .6s cubic-bezier(0.125, 0.27, 0.165, 1), color .2s !important;
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
 }
 
 .fade-in {
@@ -5713,9 +5730,8 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 .content-item {
     width: 100%;
     display: flex;
-    gap: 14px;
+    gap: 6px;
     justify-content: flex-end;
-    align-items: stretch;
     flex-direction: column;
 }
 
@@ -5758,7 +5774,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 }
 
 .content h2 {
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
     padding: 20px 0.7em 10px 0.7em;
 }
 
@@ -5950,7 +5966,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 /* Footer */
 footer {
     background: var(--surface-color);
-    font-family: "Open Sans", sans-serif;
+    font-family: Inter, sans-serif;
     padding: 60px 10px 30px 10px;
     user-select: none;
 }
@@ -6024,12 +6040,12 @@ footer a:hover {
     font-size: 28px;
     padding: 2px 0px;
     font-weight: 500;
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
 }
 
 .footer-column p {
     font-size: 15px;
-    font-family: Raleway, sans-serif;
+    font-family: Manrope, sans-serif;
 }
 
 .footer-column img {
@@ -6151,22 +6167,19 @@ footer a:hover {
 @media (max-width: 900px) {
     .people {
         grid-row: unset;
-        padding: 26px 10px 26px 10px;
+        padding: 0px 10px 26px 10px;
         width: 100%;
         transform: none !important;
     }
     .people-container {
         padding: 0px 10px 26px 10px;
+        row-gap: 20px;
         grid-template-columns: repeat(1, 1fr);
     }
     .people-container.rtl, .people-container.two-column {
         grid-template-columns: repeat(1, 1fr);
         padding: 0px 10px 26px 10px;
         direction: ltr;
-    }
-    .logo {
-        position: relative;
-        left: -3px;
     }
     .people.row-2 {
         grid-column: unset;
@@ -6180,19 +6193,19 @@ footer a:hover {
         width: 100%;
     }
     .people .name h2 {
-        font-size: 32px;
+        font-size: 30px;
     }
     .people .nickname {
-        font-size: 24px;
+        font-size: 26px;
     }
     .people .people-img {
-        height: 390px;
-        width: 340px;
+        height: 450px;
+        width: 380px;
     }
 
     .people .people-img img {
-        width: 340px;
-        height: 390px;
+        width: 380px;
+        height: 450px;
         object-position: center 17%;
     }
     .people .people-bio p {
@@ -6278,6 +6291,14 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+    .logo {
+        position: relative;
+        left: -3px;
+        filter: invert(0);
+    }
+    .equal div {
+        background-color: black;
+    }
     header, .header {
         mix-blend-mode: normal;
     }
@@ -6352,22 +6373,22 @@ footer a:hover {
     }
 
     .dialog-header {
-        padding: 10px 1.6em !important;
+        padding: 10px 1.6em;
     }
 
     dialog .content {
         width: 100%;
-        padding: 0px 1.6em 2em 1.6em !important;
+        padding: 0px 1.6em 2em 1.6em;
         
     }
 
     .section-desc {
-        margin: 5px 2.5em 30px 2.5em !important;
+        margin: 5px 0.8em 30px 0.8em;
     }
 
     .inline-caption {
         justify-content: center;
-        padding: 0px 10px 16px 0px !important;
+        padding: 0px 10px 16px 0px;
         flex-direction: column;
         overflow: hidden;
     }
@@ -6501,7 +6522,7 @@ footer a:hover {
         justify-content: center;
     }
     .section-header.large {
-        margin: 30dvh 10px 20px 10px;
+        margin: 20dvh 10px 20px 10px;
     }
 
     .side-panel {
@@ -6535,7 +6556,7 @@ footer a:hover {
     }
     
     .people .people-img {
-        height: 470px;
+        height: 500px;
         width: 100%;
     }
     

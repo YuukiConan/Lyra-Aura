@@ -1,4 +1,101 @@
 <button class="btn float-button" id="richi-ai-button" data-tooltip-key="floatMenu" aria-label="Talk to Lyra floating button"><i class="uil uil-comments"></i><span>Talk to Richi</span></button>
+<header class="header">
+    <div class="header-container">
+        <div class="brand">
+            <a href="./index.html"><img class="logo adaptive-logo" src="./assets/logo/lyra.webp" fetchpriority="high" loading="eager" alt="Lyra logo" /></a>
+            <span class="product">
+                Lyra Aura<br>
+                <span class="sub-brand">We Design, You Shine</span>
+            </span>
+        </div>
+        <div class="actions">
+            <div class="navigation">
+                <button class="navBtn"><a href="./projects.html" data-lang="home">Projects</a></button>
+                <button class="navBtn"><a href="./blog.html">Blog</a></button>
+                <button class="navBtn"><a href="./about.html">About</a></button>
+                <button class="navBtn"><a href="./richigallery.html">Gallery</a></button>
+            </div>
+            <div class="actionsBtns">
+                <div>
+                    <button class="navBtn hamburger" aria-label="hamburger button to open the hamburger menu" id="hamburger" >
+                        <div class="equal">
+                            <div class="div1"></div>
+                            <div class="div2"></div>
+                            <div class="div3"></div>
+                        </div>
+                    </button>
+                </div>
+                <div class="hidden">
+                    <button class="navBtn" id="cart" data-tooltip="Keranjang Anda">
+                        <i class="uil uil-shopping-bag"></i>
+                        <div class="promo small" id="cart-number">0</div>
+                    </button>
+                    <dialog id="cart-dialog">
+                        <h1>Keranjang Anda</h1>
+                        <p>Konten ini akan segera tersedia di Lyra!</p>
+                        <div class="dialog-btns">
+                            <button id="close1" class="btn accent">tutup</button>
+                        </div>
+                    </dialog>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="overlay"></div>
+<div class="nav-pane hidden" >  
+    <div class="nav-container">
+        <div class="content">
+            <div class="content-item menu">
+                <a href="./projects.html"><button class="menuButton" id="projects"><i class="uil uil-graduation-cap"></i>Projects</button></a>
+                <a href="./blog.html"><button class="menuButton" id="blog"><i class="lni lni-gallery"></i>Blog</button></a>
+                <a href="./about.html"><button class="menuButton" id="about"><i class="lni lni-heart" ></i>About</button></a>
+                <a href="./richigallery.html"><button class="menuButton" id="gallery"><i class="lni lni-heart"></i>Gallery</button></a>
+            </div>
+            <div class="content-item preview">
+                <div class="preview-item projects-item">
+                    <h1 class="divider">Preferred</h1>
+                    <div class="category-container">
+                        <a href="./interior.html"><div class="category">Interior Design</div></a>
+                        <a href="./fashion.html"><div class="category">Fashion Design</div></a>
+                        <a href="./graphics.html"><div class="category">UI/UX Designer</div></a>
+                        <a href="./wordpress.html"><div class="category">Wordpress</div></a>
+                    </div>
+                    <h1 class="divider">SEO and Wordpress</h1>
+                    <div class="category-container">
+                        <a href="./seo.html"><div class="category">SEO Analyzer</div></a>
+                        <a href="./wordpress.html#retainer"><div class="category">Wordpress Retainer</div></a>
+                    </div>
+                </div>
+                <div class="preview-item blog-item"><img src="/Keyza_Richi_Showcase.webp" alt="showcase" width="100%" height="400" style="object-fit: cover;"></div>
+                <div class="preview-item about-item"></div>
+                <div class="preview-item gallery-item">
+                    <div class="gallery-container">
+                        <img src="/assets/image/keyza_richi/richi_duta1.webp">
+                        <img src="/assets/image/keyza_richi/richi_duta2.webp">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"> 
+            <div class="footer-flex">
+                <div class="navpane-footer-links">
+                    <a href="./resources.html" class="footer-a">Resources</a>
+                    <a href="./contact.html" class="footer-a">Contact</a>
+                </div>
+                <div class="navpane-footer-actions">
+                    <button class="btn accent chat">Talk to Lyra</button>
+                    <input type="checkbox" id="cbx" name="changetheme" hidden />
+                    <button class="btn empty toggleTheme" id="toggleTheme"><i class="lni lni-moon-half-right-5" id="themeIcon"></i></button>
+                    <i class="uil uil-setting" id="labs"></i>
+                </div>
+            </div>
+            <div>
+            <button class="btn large accent chat-alt">Talk to Lyra</button>
+            </div>
+        </div>
+    </div>
+</div>
 <dialog id="float-menu" data-lenis-prevent>
     <div class="dialog-header">
         <div>
@@ -120,101 +217,4 @@
     </div>
     
 </dialog>
-<header class="header">
-    <div class="header-container">
-        <div class="brand">
-            <a href="./index.html"><img class="logo adaptive-logo" src="./assets/logo/lyra.webp" fetchpriority="high" loading="eager" alt="Lyra logo" /></a>
-            <span class="product">
-                Lyra & Co.<br>
-                <span class="sub-brand">We Design, You Shine</span>
-            </span>
-        </div>
-        <div class="actions">
-            <div class="navigation">
-                <button class="navBtn"><a href="./projects.html" data-lang="home">Projects</a></button>
-                <button class="navBtn"><a href="./blog.html">Blog</a></button>
-                <button class="navBtn"><a href="./about.html">About</a></button>
-                <button class="navBtn"><a href="./richigallery.html">Gallery</a></button>
-            </div>
-            <div class="actionsBtns">
-                <div>
-                    <button class="navBtn hamburger" aria-label="hamburger button to open the hamburger menu" id="hamburger" >
-                        <div class="equal">
-                            <div class="div1"></div>
-                            <div class="div2"></div>
-                            <div class="div3"></div>
-                        </div>
-                    </button>
-                </div>
-                <div class="hidden">
-                    <button class="navBtn" id="cart" data-tooltip="Keranjang Anda">
-                        <i class="uil uil-shopping-bag"></i>
-                        <div class="promo small" id="cart-number">0</div>
-                    </button>
-                    <dialog id="cart-dialog">
-                        <h1>Keranjang Anda</h1>
-                        <p>Konten ini akan segera tersedia di Lyra!</p>
-                        <div class="dialog-btns">
-                            <button id="close1" class="btn accent">tutup</button>
-                        </div>
-                    </dialog>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<div class="overlay"></div>
-<div class="nav-pane hidden" >  
-    <div class="nav-container">
-        <div class="content">
-            <div class="content-item menu">
-                <a href="./projects.html"><button class="menuButton" id="projects"><i class="uil uil-graduation-cap"></i>Projects</button></a>
-                <a href="./blog.html"><button class="menuButton" id="blog"><i class="lni lni-gallery"></i>Blog</button></a>
-                <a href="./about.html"><button class="menuButton" id="about"><i class="lni lni-heart" ></i>About</button></a>
-                <a href="./richigallery.html"><button class="menuButton" id="gallery"><i class="lni lni-heart"></i>Gallery</button></a>
-            </div>
-            <div class="content-item preview">
-                <div class="preview-item projects-item">
-                    <h1 class="divider">Preferred</h1>
-                    <div class="category-container">
-                        <a href="./interior.html"><div class="category">Interior Design</div></a>
-                        <a href="./fashion.html"><div class="category">Fashion Design</div></a>
-                        <a href="./graphics.html"><div class="category">UI/UX Designer</div></a>
-                        <a href="./wordpress.html"><div class="category">Wordpress</div></a>
-                    </div>
-                    <h1 class="divider">SEO and Wordpress</h1>
-                    <div class="category-container">
-                        <a href="./seo.html"><div class="category">SEO Analyzer</div></a>
-                        <a href="./wordpress.html#retainer"><div class="category">Wordpress Retainer</div></a>
-                    </div>
-                </div>
-                <div class="preview-item blog-item"><img src="/Keyza_Richi_Showcase.webp" alt="showcase" width="100%" height="400" style="object-fit: cover;"></div>
-                <div class="preview-item about-item"></div>
-                <div class="preview-item gallery-item">
-                    <div class="gallery-container">
-                        <img src="/assets/image/keyza_richi/richi_duta1.webp">
-                        <img src="/assets/image/keyza_richi/richi_duta2.webp">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer"> 
-            <div class="footer-flex">
-                <div class="navpane-footer-links">
-                    <a href="./resources.html" class="footer-a">Resources</a>
-                    <a href="./contact.html" class="footer-a">Contact</a>
-                </div>
-                <div class="navpane-footer-actions">
-                    <button class="btn accent chat">Talk to Lyra</button>
-                    <input type="checkbox" id="cbx" name="changetheme" hidden />
-                    <button class="btn empty toggleTheme" id="toggleTheme"><i class="lni lni-moon-half-right-5" id="themeIcon"></i></button>
-                    <i class="uil uil-setting" id="labs"></i>
-                </div>
-            </div>
-            <div>
-            <button class="btn large accent chat-alt">Talk to Lyra</button>
-            </div>
-        </div>
-    </div>
-</div>
 
