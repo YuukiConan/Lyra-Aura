@@ -1144,7 +1144,6 @@ header.no-blend {
 .header-container.scrolled {
     padding: 10px 1.0em 10px 1.0em;
 }
-
 .header-container.scrolled .navigation {
     opacity: 0;
     transform: translateX(40px);
@@ -4709,7 +4708,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     object-fit: cover;
     opacity: 1;
     filter: invert(1);
-    transform: translateY(0px) scale(1.04);
+    transform: translateY(0px) scale(1.08);
     transition: opacity .3s cubic-bezier(0.075, 0.82, 0.403, 1), transform .3s cubic-bezier(0.075, 0.92, 0.403, 1);
 }
 
