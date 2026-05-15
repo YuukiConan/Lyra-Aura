@@ -5498,7 +5498,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     border-radius: 16px;
     opacity: 0;
     color: var(--text-color);
-    transform: translateY(40px);
+    transform: translateY(30px);
     transition: opacity .3s cubic-bezier(0.075, 0.82, 0.165, 1), transform .6s cubic-bezier(0.125, 0.27, 0.165, 1), color .2s !important;
     font-family: Manrope, sans-serif !important;
     cursor: pointer;
@@ -5844,8 +5844,6 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 
     .menuButton {
         font-size: 2.5rem;
-        opacity: 1;
-        transform: translateY(0px);
     }
     
     
@@ -5880,15 +5878,8 @@ header:has(.nav-pane:not(.hidden)) .navigation {
         align-items: center;
         position: relative;
         top: 0;
-        opacity: 1;
-        transform: none;
-        transition: none !important;
         gap: 12px;
         padding: 10px 30px 20px 30px;
-    }
-    .nav-pane .footer.fade-in {
-        animation: none;
-        transform: none;
     }
     header:has(.nav-pane:not(.hidden)) :is(.product, .logo) {
         opacity: 0;
