@@ -1444,7 +1444,7 @@ code {
 }
 
 .btn.xl {
-    padding: 12px 60px;
+    padding: 16px 60px;
     font-size: 22px;
 }
 
@@ -1737,7 +1737,7 @@ div {
 .section-header.stylish .section-title {
     width: 68%;
     font-weight: 500;
-    margin: 0 20px 10px 20px;
+    margin: 0 8px 10px 8px;
     font-size: 4.5rem;
     letter-spacing: .7px;
 }
@@ -1793,7 +1793,6 @@ div {
 .section-title.small {
     font-size: 2rem;
     margin: 10px 16px 10px 16px;
-    padding-bottom: 20px;
     font-weight: 400;
 }
 
@@ -2479,10 +2478,17 @@ div {
         width: 100%;
         padding: 0.2em 1.5em 1em 1.5em;
     }
+    .flex-box .box-content h1 {
+        font-size:20px;
+    }
     .flex-box .box-content h2 {
-        font-size: 34px;
+        font-size: 28px;
         text-transform: initial;
         margin: 20px 0px 0px 0;
+    }
+    .flex-box .box-content-desc p {
+        font-size: 16px;
+        line-height: 26px;
     }
     .box-content .name {
         margin: 0px 0 0px 0;
@@ -2576,7 +2582,7 @@ div {
 .timeline {
     width: 100%;
     height: 100%;
-    margin: 0em 0 2em 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -5104,7 +5110,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1), background-color .6s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .divider {
-    margin: 10px 0 5px 0;
+    margin: 2px 0 2px 0;
     font-size: 24px !important;
 }
 .panel-header.scrolled #people-topbar {
@@ -6165,7 +6171,7 @@ footer a:hover {
     }
     .section-header.large .section-title {
         font-size: 4.5rem;
-        margin: 0px 16px 10px 16px;
+        margin: 0px 12px 10px 12px;
     }
     .flex-grids {
         margin: 0 2em;
@@ -6204,14 +6210,24 @@ footer a:hover {
     }
     
     .timeline-item-content h1 {
-        font-size: 34px;
+        font-size: 24px;
         font-weight: 400;
+    }
+    
+    .timeline-item-header h1 {
+        font-size:28px;
+        font-weight: 500;
     }
     
     .timeline-item {
         flex-wrap: wrap;
-        gap: 1.5em;
-        padding: 20px 0.2em;
+        gap: 0px;
+        padding: 12px 0.2em;
+    }
+    
+    .timeline-item-content p {
+        font-size: 16px;
+        line-height: 27px;
     }
 
     .timeline.parallax .timeline-item-header h1 {
@@ -6236,8 +6252,8 @@ footer a:hover {
     }
     .people-container.rtl, .people-container.two-column {
         grid-template-columns: repeat(1, 1fr);
-        padding: 10px 10px 10px 10px;
-        gap: 20px !important;
+        padding: 16px 10px 30px 10px;
+        row-gap: 42px !important;
         direction: ltr;
     }
     .people.row-2 {
@@ -6256,6 +6272,7 @@ footer a:hover {
     }
     .people .nickname {
         font-size: 23px !important;
+        positive: relative; top: 1px;
     }
     .people .people-img {
         height: 450px;
@@ -6328,12 +6345,15 @@ footer a:hover {
         margin: 10px 0;
     }
     .footer-section {
-        padding: 50px 10px;
+        padding: 22px 10px;
         width: 100%;
         justify-content: flex-start;
     }
+    .footer-section h1 {
+        font-size: 18px;
+    }
     .contact-section, .footer-section-links {
-        gap: 2em;
+        gap: 1.2em;
     }
     .contact-section {
         width: 100%;
@@ -6544,14 +6564,14 @@ footer a:hover {
         justify-content: flex-start;
         gap: 0;
         width: auto;
-        margin: 0px 8px 0px 8px !important;
+        margin: 0px 6px 0px 6px !important;
         
     }
     .section-header.stylish .section-title {
         width: auto;
         border-bottom: none;
         font-weight: 400;
-        margin: 0 4px !important;
+        margin: 0 6px !important;
     }
     .section-header.stylish :first-child {
         padding-bottom: 0;
@@ -6590,9 +6610,12 @@ footer a:hover {
         width: 100%;
         height: 500px;
     }
-
+    .side-panel p {
+        font-size: 16px;
+        line-height: 27px;
+    }
     .statistics {
-        margin: 2em 2em 1em 2em;
+        margin: 20px 2em 20px 2em;
     }
 }
 
@@ -6603,7 +6626,7 @@ footer a:hover {
     }
     
     .people .people-img {
-        height: 500px;
+        height: 520px;
         width: 100%;
     }
     
@@ -6622,7 +6645,7 @@ footer a:hover {
 
     .people .people-img img {
         width: 100%;
-        height: 470px;
+        height: 520px;
         object-position: center 17%;
     }
     .header-container.hide {
