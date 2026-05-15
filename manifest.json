@@ -1,0 +1,18 @@
+{
+  "short_name": "Lyra Aura",
+  "name": "Lyra Aura - We Design, You Shine",
+  "icons": [
+    {
+      "src": "/assets/logo/lyra.webp",
+      "type": "image/webp",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#FDFDFD",
+  "display": "standalone",
+  "scope": "/",
+  "description": "A simple web app demonstration.",
+  "orientation": "portrait"
+}
