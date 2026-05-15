@@ -144,9 +144,11 @@ fetch(url).then(response => response.text()).then(html => {
     let menuAnimationDuration = 550;
     let navPaneAnimDuration = 9;
 
+    // Both logics below may seem redundant to some developers, but this is a temporary mitigation to patch a bug with NavPane animations being too slow on mobile. 
+    // for desktop, fix a bug when these animation duration aren't set to expected value unless you resizing the window's width less than or equal to 768px and refresh the page.
     window.addEventListener('resize', () => {
         if (window.innerWidth <= 768) {
-            menuAnimationDuration = 0;
+            menuAnimationDuration = 200;
             navPaneAnimDuration = 3;
         } else {
             menuAnimationDuration = 550;
@@ -154,6 +156,14 @@ fetch(url).then(response => response.text()).then(html => {
         }
     })
 
+    // for mobile, fix a bug when sometimes these animation duration are still same as desktop's default value. 
+    if (window.innerWidth <= 768) {
+        menuAnimationDuration = 200;
+        navPaneAnimDuration = 3;
+    } else {
+        menuAnimationDuration = 550;
+        navPaneAnimDuration = 9;
+    }
 
     menuButtons.forEach(btn => {
         const targetItemClass = btn.id + "-item";
@@ -218,6 +228,10 @@ fetch(url).then(response => response.text()).then(html => {
         if (isAnimating) return;
         isAnimating = true;
         btn.classList.add('no-pointer');
+        if (window.innerWidth <= 768) {
+            menuAnimationDuration = 300;
+            navPaneAnimDuration = 3;
+        }
         
         requestAnimationFrame(() => {
             btn.classList.remove('active');
@@ -247,7 +261,7 @@ fetch(url).then(response => response.text()).then(html => {
                     header.classList.remove('no-blend');
                     setTimeout(() => {
                         btn.classList.remove('no-pointer');
-                    }, 1000) 
+                    }, 600) 
                 }
             }, {once: true});
         });
