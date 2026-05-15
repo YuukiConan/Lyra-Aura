@@ -23,34 +23,6 @@ fetch(url)
                 const name = el.querySelectorAll(".name h2");
                 const nickname = el.querySelectorAll(".name span");
                 const desc = el.querySelectorAll("p");
-                // const likeBtn = container.querySelector(".people-btns .like-count");
-
-                // Handle like button
-                // if (likeBtn) {
-                //     const saved = parseInt(localStorage.getItem(`likeCount_${person.id}`));
-
-                //     if (!isNaN(saved)) {
-                //         person.like_count = saved;
-                //     }
-
-                //     likeBtn.textContent = person.like_count;
-
-                //     if (!likeBtn.dataset.bound) {
-                //         likeBtn.dataset.bound = "true";
-
-                //         likeBtn.addEventListener("click", () => {
-                //             const liked = likeBtn.classList.toggle("liked");
-
-                //             person.like_count += liked ? 1 : -1;
-                //             likeBtn.textContent = person.like_count;
-
-                //             localStorage.setItem(
-                //                 `likeCount_${person.id}`,
-                //                 person.like_count
-                //             );
-                //         });
-                //     }
-                // }
 
                 // Set name
                 name.forEach(n => {
@@ -115,7 +87,6 @@ fetch(url)
 document.addEventListener('DOMContentLoaded', () => {
     const people = document.querySelectorAll('.people');
     const overlay = document.querySelector('.overlay');
-    const url = "./json/peopleBio.json";
     let peopleData = [];
     
     fetch(url)
@@ -134,6 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const bio = panel.querySelector('.people-bio h1');
     const img = panel.querySelector('.people-img');
     const badges = panel.querySelector('.badge-container');
+    const peopleCtr = document.querySelector('.people-container');
+    const activeMembers = ["richi", "keke", "anastasya", "anneta", "yosia", "lusiana", "aqueena", "fini", "chelsy"];
+    let hiddenCounts = 0;
 
     panel.addEventListener('scroll', () => {
         if (panel.scrollTop > ((bio.getBoundingClientRect().top - panel.getBoundingClientRect().top) / 0.5)) {
@@ -146,6 +120,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeCard = null;
     
     people.forEach(card => {
+        const key = card.querySelector('.people-bio').dataset.people;
+
+        if (!activeMembers.includes(key)) {
+            card.classList.add('hidden');
+            hiddenCounts++;
+        }
         card.addEventListener('click', () => {
             document.body.style.overflowY = 'hidden';
             document.querySelectorAll('.side-panel div').forEach((item, i) => {
@@ -251,6 +231,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         })
     })
+
+    if (hiddenCounts > 0) {
+        const info = document.createElement('div');
+        info.textContent = `and ${hiddenCounts} other unknown members`;
+        peopleCtr.appendChild(info);
+    }
     
     function closePanel() {
         requestAnimationFrame(() => {

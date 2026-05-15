@@ -141,6 +141,19 @@ fetch(url).then(response => response.text()).then(html => {
     const brand = document.querySelector('.nav-pane .footer');
     const previews = document.querySelectorAll('.preview-item');
     let isAnimating = false;
+    let menuAnimationDuration = 550;
+    let navPaneAnimDuration = 9;
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 768) {
+            menuAnimationDuration = 0;
+            navPaneAnimDuration = 3;
+        } else {
+            menuAnimationDuration = 550;
+            navPaneAnimDuration = 9;
+        }
+    })
+
 
     menuButtons.forEach(btn => {
         const targetItemClass = btn.id + "-item";
@@ -177,9 +190,10 @@ fetch(url).then(response => response.text()).then(html => {
         brand.classList.remove('fade-out');
         brand.classList.add('fade-in');
         header.classList.add('no-blend');
+        btn.classList.add('active');
         
         requestAnimationFrame(() => { 
-            navpane.style.animation = 'fadeInUpSmooth .9s cubic-bezier(0.475, 0.12, 0.165, 1)';
+            navpane.style.animation = `fadeInUpSmooth .${navPaneAnimDuration}s cubic-bezier(0.475, 0.12, 0.165, 1)`;
             btn.classList.add('no-pointer');
             navpane.classList.remove('hidden');
             setTimeout(() => {
@@ -190,10 +204,9 @@ fetch(url).then(response => response.text()).then(html => {
                     }, index * 60);
                     
                 })
-            }, 800)
+            }, menuAnimationDuration)
             navpane.addEventListener('animationend', () => {
                 if (navpane.style.animation.includes('fadeIn')) {
-                    btn.classList.add('active');
                     btn.classList.remove('no-pointer');
                     isAnimating = false;
                 }
@@ -205,17 +218,12 @@ fetch(url).then(response => response.text()).then(html => {
         if (isAnimating) return;
         isAnimating = true;
         btn.classList.add('no-pointer');
-        let delay = 550;
-        
-        if (window.innerWidth <= 600) {
-            delay = 0;
-        }
         
         requestAnimationFrame(() => {
             btn.classList.remove('active');
             setTimeout(() => {
-                navpane.style.animation = 'fadeOutUpSmooth .9s cubic-bezier(0.8, 0.292, 0.333, 1)';
-            }, delay);
+                navpane.style.animation = `fadeOutUpSmooth .${navPaneAnimDuration}s cubic-bezier(0.8, 0.292, 0.333, 1)`;
+            }, menuAnimationDuration);
             
             overlay.classList.remove('showOverlay');
             brand.classList.add('fade-out');
@@ -228,7 +236,7 @@ fetch(url).then(response => response.text()).then(html => {
                     btn.classList.add('fade-out');
                     brand.classList.remove('fade-in');
                     brand.classList.add('fade-out');
-                }, index * 170);
+                }, index * 100);
                 
             })
             

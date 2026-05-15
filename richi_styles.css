@@ -54,6 +54,11 @@ a {
     will-change: padding;
     backface-visibility: hidden;
 }
+.image-container {
+    padding: 20px 20px;
+    will-change: padding;
+    backface-visibility: hidden;
+}
 
 .video-container .video {
     border-radius: 42px;
@@ -256,7 +261,7 @@ a {
 
 .hero {
     width: 100%;
-    padding: 8.5% 0 2em 0;
+    padding: 6% 0 2em 0;
 }
 
 .hero i {
