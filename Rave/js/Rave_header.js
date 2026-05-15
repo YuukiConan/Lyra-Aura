@@ -482,5 +482,54 @@ panels.forEach(el => {
     })
 })
 
+const selectLang = document.getElementById('select-lang');
+
+async function loadLanguage(lang) {
+    const res = await fetch(`/json/lang/${lang}.json`);
+    if (!res.ok) throw new Error('Language not found.');
+    return res.json();
+    
+}
+function applyLang(text) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        const key = el.dataset.lang;
+        const attr = el.dataset.attr;
+
+        if (!text[key] || !(key in text)) return;
+
+        if (attr) {
+            el.setAttribute(attr, text[key]);
+        } else {
+            el.innerHTML = text[key];
+        }
+    })
+}
+
+async function setLang(lang) {
+    console.log('settings:', lang)
+    try {
+        const translate = await loadLanguage(lang);
+        applyLang(translate);
+        localStorage.setItem('lang', lang)
+        selectLang.value = lang;
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const langState = localStorage.getItem('lang');
+    const browser = navigator.language.slice(0, 2);
+    const lang = langState || browser || 'id'
+    
+    setLang(lang);
+    selectLang.value = lang;
+})
+
+
+selectLang.addEventListener('change', (e) => {
+    console.log('changed:', e.target.value)
+    setLang(e.target.value);
+})
 
 })
