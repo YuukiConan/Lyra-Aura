@@ -1720,6 +1720,14 @@ div {
     justify-content: space-between;
 }
 
+.section-header.inline a {
+    padding: 12px 16px;
+    background-color: var(--bg-icon-color);
+    color: var(--text-color) !important;
+    border-radius: 50px;
+    margin: 4px 0;
+}
+
 .section-header.small .section-title {
     font-size: 2rem;
     margin: 10px 20px 10px 20px;
@@ -2599,7 +2607,7 @@ div {
 
 .timeline-item {
     width: 100%;
-    padding: 30px 1em;
+    padding: 20px 1em;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -5810,6 +5818,10 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     
     .video-container, .image-container {
         padding: 10px 0px !important;
+        border-radius:0 !important;
+    }
+    .video {
+        border-radius: 0 !important;
     }
     
     .settings {
@@ -6116,11 +6128,58 @@ footer a:hover {
     }
 }
 @media (max-width: 1024px) {
-    main {
-        margin-top: 60px;
+    .timeline {
+        padding: 20px 0px;
     }
+    .timeline-content {
+        padding: 0 10px;
+    }
+    .timeline-item-content, .timeline-item-header {
+        width: 100%;
+        max-width: 100%;
+        padding: 0px 0.2em;
+    }
+
+    .timeline-item a {
+        padding: 12px 16px;
+        background-color: var(--bg-icon-color);
+        color: var(--text-color) !important;
+        border-radius: 50px;
+        margin: 8px 3px;
+    }
+    
+    .timeline-item-content h1 {
+        font-size: 24px;
+        font-weight: 400;
+    }
+    
+    .timeline-item-header h1 {
+        font-size:28px;
+        font-weight: 500;
+    }
+    
+    .timeline-item {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px 0.2em;
+    }
+    
+    .timeline-item-content p {
+        font-size: 16px;
+        line-height: 27px;
+    }
+
+    .timeline.parallax .timeline-item-header h1 {
+        font-size: 2rem
+    }
+
+    .timeline-sub-item {
+        padding: 10px 10px;
+    }
+    
+    
     .intro {
-        padding: 3.5em 0 20px 0 !important;
+        padding: 5em 0 20px 0 !important;
     }
     .header-container {
         padding: 6px 0em 6px 0em;
@@ -6167,7 +6226,7 @@ footer a:hover {
         max-height: 600px;
     }
     .section-header.large {
-        margin: 6em 4px 10px 4px;
+        margin: 8em 4px 10px 4px;
     }
     .section-header.large .section-title {
         font-size: 4.5rem;
@@ -6197,47 +6256,6 @@ footer a:hover {
 
 
 @media (max-width: 900px) {
-    .timeline {
-        padding: 20px 0px;
-    }
-    .timeline-content {
-        padding: 0 10px;
-    }
-    .timeline-item-content, .timeline-item-header {
-        width: 100%;
-        max-width: 100%;
-        padding: 10px 0.2em;
-    }
-    
-    .timeline-item-content h1 {
-        font-size: 24px;
-        font-weight: 400;
-    }
-    
-    .timeline-item-header h1 {
-        font-size:28px;
-        font-weight: 500;
-    }
-    
-    .timeline-item {
-        flex-wrap: wrap;
-        gap: 0px;
-        padding: 12px 0.2em;
-    }
-    
-    .timeline-item-content p {
-        font-size: 16px;
-        line-height: 27px;
-    }
-
-    .timeline.parallax .timeline-item-header h1 {
-        font-size: 2rem
-    }
-
-    .timeline-sub-item {
-        padding: 10px 10px;
-    }
-    
     .people {
         grid-row: unset;
         padding: 0px 4px 0px 4px;
@@ -6559,7 +6577,6 @@ footer a:hover {
     }
 
     .section-header.stylish {
-        
         flex-direction: row;
         justify-content: flex-start;
         gap: 0;
@@ -6580,7 +6597,6 @@ footer a:hover {
         text-align: left;
     }
 
-    
     .section-header.medium .section-title {
         font-size: 2rem;
         margin: 0px 10px 20px 10px;
@@ -6589,7 +6605,6 @@ footer a:hover {
         flex-direction: column;
         justify-content: center;
     }
-    
 
     .side-panel {
         inset: 0;
@@ -6615,7 +6630,10 @@ footer a:hover {
         line-height: 27px;
     }
     .statistics {
-        margin: 20px 2em 20px 2em;
+        margin: 26px 1em 26px 1em;
+    }
+    .statistics h2 {
+        font-size: 4rem;
     }
 }
 
