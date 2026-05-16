@@ -1117,11 +1117,14 @@ header, .header {
     left: 0;
     right: 0;
     z-index: 10 !important;
+    will-change: mix-blend-mode, transform;
     mix-blend-mode: exclusion;
+    backface-visibility: hidden;
 }
 
 header.no-blend {
     mix-blend-mode: normal;
+    will-change: auto;
 }
 
 .header-container {
@@ -6124,7 +6127,6 @@ footer a:hover {
 }
 @media (max-width: 1024px) {
     .toggleTheme {
-        color: inherit;
         font-size: 2rem;
     }
     .people-container .people.expr {
@@ -6394,7 +6396,6 @@ footer a:hover {
     .logo {
         position: relative;
         left: -6px;
-        filter: invert(0);
         transform: scale(1.1);
     }
     .actions {
@@ -6404,11 +6405,7 @@ footer a:hover {
         display: none;
     }
     .hamburger {
-        filter: invert(0);
         display: flex;
-    }
-    header, .header {
-        mix-blend-mode: normal;
     }
     @keyframes fadeInUpSmooth {
     from {
