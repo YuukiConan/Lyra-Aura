@@ -6,8 +6,8 @@
       "src": "/assets/logo/lyra.webp",
       "type": "image/webp",
       "sizes": "500x500",
-      "purpose": "any"
-    },
+      "purpose": "maskable"
+    }
   ],
   "start_url": "/?source=pwa",
   "background_color": "#FDFDFD",
