@@ -1,15 +1,9 @@
 {
-    "welcome": "Enhance Your Space with Richi's Signature Designs!",
+    "hero-section-intro-desc": "We fuse the structural elegance of interior design, modern fashion, combining with the bold and dynamic pulse of art. Discover a curated projects where your brand's lifestyle is brought to life.",
     "home": "Home",
-    "team": "Team",
-    "course": "Course",
-    "contact-me": "Contact me!",
-    "settings": "Settings",
-    "general": "General",
-    "about": "About this web",
-    "experimental": "Experimental features",
-    "acc-text-1": "Web Themer &bull; Animation &bull; Accent color &bull; Read Mode",
-    "acc-text-2": "Version number &bull; License",
-    "acc-text-3": "Experimental features for developers.",
-    "settings-warning": "Warning: This page is unstable because all features or interactions are not yet working properly."
+    "header-navbtn-text-1": "Build",
+    "header-navbtn-text-2": "Blog",
+    "header-navbtn-text-3": "About",
+    "header-navbtn-text-4": "Careers",
+    "settings": "Settings"
 }

@@ -2,15 +2,15 @@
 <header class="header">
     <div class="header-container">
         <div class="brand">
-            <a href="./index.html"><img class="logo adaptive-logo" src="./assets/logo/lyra.webp" fetchpriority="high" loading="eager" alt="Lyra logo" /></a>
+            <a href="/"><img class="logo adaptive-logo" src="./assets/logo/lyra.webp" fetchpriority="high" loading="eager" alt="Lyra logo" /></a>
             
         </div>
         <div class="actions">
             <div class="navigation">
-                <button class="navBtn"><a href="/build.html">Build</a></button>
-                <button class="navBtn"><a href="./blog.html">Blog</a></button>
-                <button class="navBtn"><a href="./about.html">About</a></button>
-                <button class="navBtn"><a href="./careers.html">Careers</a></button>
+                <button class="navBtn"><a href="/build.html" data-lang="header-navbtn-text-1">Build</a></button>
+                <button class="navBtn"><a href="./blog.html" data-lang="header-navbtn-text-2">Blog</a></button>
+                <button class="navBtn"><a href="./about.html" data-lang="header-navbtn-text-3">About</a></button>
+                <button class="navBtn"><a href="./careers.html" data-lang="header-navbtn-text-4">Careers</a></button>
             </div>
             <div class="actionsBtns">
                 <div>
@@ -51,10 +51,10 @@
     <div class="nav-container">
         <div class="content">
             <div class="content-item menu">
-                <a href="./build.html"><button class="menuButton" id="projects"><i class="uil uil-graduation-cap"></i>Build</button></a>
-                <a href="./blog.html"><button class="menuButton" id="blog"><i class="lni lni-gallery"></i>Blog</button></a>
-                <a href="./about.html"><button class="menuButton" id="about"><i class="lni lni-heart" ></i>About</button></a>
-                <a href="./careers.html"><button class="menuButton" id="gallery"><i class="lni lni-heart"></i>Careers</button></a>
+                <a href="./build.html"><button class="menuButton" id="projects" data-lang="header-navbtn-text-1"><i class="uil uil-graduation-cap"></i>Build</button></a>
+                <a href="./blog.html"><button class="menuButton" id="blog" data-lang="header-navbtn-text-2"><i class="lni lni-gallery"></i>Blog</button></a>
+                <a href="./about.html"><button class="menuButton" id="about" data-lang="header-navbtn-text-3"><i class="lni lni-heart" ></i>About</button></a>
+                <a href="./careers.html"><button class="menuButton" id="gallery" data-lang="header-navbtn-text-4"><i class="lni lni-heart"></i>Careers</button></a>
             </div>
             <div class="content-item preview" data-lenis-prevent>
                 <div class="preview-item projects-item">
@@ -143,21 +143,12 @@
             </datalist>
         </div>
         <div class="accordion-item">
-            <h5 class="accordion-item-title full">Rave Web Themer <br><span class="accordion-item-desc"></span>
+            <h5 class="accordion-item-title full">Color palette <br><span class="accordion-item-desc"></span>
             
             <div class="color-template">
                 <div class="flex">
-                    <div class="panel" data-theme="default">
-                        <h1>Gold Luxury</h1>
-                        <div class="panel-image gold-luxury">
-                            <div class="primary"></div>
-                            <div class="secondary"></div>
-                            <div class="tertiary"></div>
-                        </div>
-                        <p>A luxurious gold color that is soft and elegant, especially when dark mode is active.</p>
-                    </div>
-                    <div class="panel selected" data-theme="mono">
-                        <h1>Mono</h1>
+                    <div class="panel" data-theme="mono">
+                        <h1>Monochrome</h1>
                         <div class="panel-image mono">
                             <div class="primary"></div>
                             <div class="secondary"></div>
@@ -165,16 +156,7 @@
                         </div>
                         <p>Monochrome colors (black and white) which give a minimalist and modern impression to most websites.</p>
                     </div>
-                    <div class="panel" data-theme="sarah-olive">
-                        <h1>Sarah Olive</h1>
-                        <div class="panel-image sarah-olive">
-                            <div class="primary"></div>
-                            <div class="secondary"></div>
-                            <div class="tertiary"></div>
-                        </div>
-                        <p>The olive color with a mix of pink is suitable to give the impression as if visitors are in nature. </p>
-                    </div>
-                    <div class="panel" data-theme="nia-charm">
+                    <div class="panel selected" data-theme="nia-charm">
                         <h1>Charm of Nia</h1>
                         <div class="panel-image nia-charm">
                             <div class="primary"></div>
@@ -200,16 +182,24 @@
                 <span class="slider"></span>
             </label>
         </div>
-        <h1 class="dialog-divider">Labs</h1>
-        <div class="accordion-item hidden">
-            <h5 class="accordion-item-title">Switch tema terang/gelap berdasarkan zona waktu.</h5> 
+        <h1 class="dialog-divider">Readability</h1>
+        <div class="accordion-item">
+            <h5 class="accordion-item-title">Switch theme based on local time zone</h5> 
             <label class="toggle">
                 <input type="checkbox" class="toggleCheckbox" id="useDaylightModeCbx" />
                 <span class="slider"></span>
             </label>
         </div>
         <div class="accordion-item">
-            <h5 class="accordion-item-title">Mode Minimalist<br><span class="accordion-item-desc">Use monochrome colors and minimalist web design.</span></h5> 
+            <h5 class="accordion-item-title">Line spacing in paragraph</h5> 
+            <select class="color-picker-select" id="line-spacing" >
+                <option value="narrow">Narrow</option>
+                <option value="normal" selected>Normal</option>
+                <option value="wide">Wide</option>
+            </select>
+        </div>
+        <div class="accordion-item">
+            <h5 class="accordion-item-title">Minimalist Mode<br><span class="accordion-item-desc">Use monochrome colors and minimalist web design.</span></h5> 
             <label class="toggle">
                 <input type="checkbox" class="toggleCheckbox" id="monochromeCbx" />
                 <span class="slider"></span>

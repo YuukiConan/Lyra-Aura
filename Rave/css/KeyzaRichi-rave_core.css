@@ -269,7 +269,7 @@ option::checkmark {
     --primary-color: rgb(179, 130, 98);
     --secondary-color: rgb(99, 43, 53);
     --tertiary-color: rgb(236, 198, 216);
-    --background-color: rgb(255, 244, 241);
+    --background-color: rgb(255, 238, 221);
     --bg-color-value: 255, 252, 245;
     --backdrop-color: rgba(var(--bg-color-value), 0.95);
     --surface-color: rgb(252, 243, 230);
@@ -278,12 +278,30 @@ option::checkmark {
     --conic-gradient: conic-gradient(from var(--angle), rgb(196, 224, 74), rgb(168, 184, 76), rgb(221, 221, 221));
     --bg-icon-color: rgba(216, 153, 117, 0.151);
     --text-color: rgb(19, 14, 1);
+    --spacing-1: 24px;
+    --spacing-2: 26px;
+    --spacing-3: 32px;
     color-scheme: light dark;
+}
+.narrow-spacing {
+    --spacing-1: 20px;
+    --spacing-2: 22px;
+    --spacing-3: 28px;
+}
+.normal-spacing {
+    --spacing-1: 24px;
+    --spacing-2: 26px;
+    --spacing-3: 32px;
+}
+.wide-spacing {
+    --spacing-1: 28px;
+    --spacing-2: 30px;
+    --spacing-3: 36px;
 }
 
 :root.dark-mode,
 html[data-theme="dark"] {
-    --background-color: rgb(34, 26, 21);
+    --background-color: rgb(20, 14, 8);
     --primary-color: rgb(202, 147, 111);
     --surface-color: rgb(37, 26, 21);
     --bg-color-value: 27, 23, 21;
@@ -417,7 +435,7 @@ html[data-theme="light"] {
     --primary-color: rgb(179, 130, 98);
     --secondary-color: rgb(99, 43, 53);
     --tertiary-color: rgb(236, 198, 216);
-    --background-color: rgb(255, 244, 241);
+    --background-color: rgb(255, 248, 241);
     --bg-color-value: 255, 252, 245;
     --backdrop-color: rgba(var(--bg-color-value), 0.95);
     --surface-color: rgb(252, 243, 230);
@@ -532,7 +550,6 @@ h1.center {
     font-weight: 400;
     text-align: center;
     margin: 0 2em 2em 2em;
-    line-height: 32px;
     font-size: clamp(16px, 5vw, 26px);
 }
 
@@ -1440,7 +1457,7 @@ code {
 }
 
 .btn.xl {
-    padding: 16px 60px;
+    padding: 16px 50px;
     font-size: 22px;
 }
 
@@ -1735,13 +1752,13 @@ div {
 
 .section-header.stylish {
     width: 100%;
-    margin: 10px 6px 10px 6px;
+    margin: 5px 7px 5px 7px;
 }
 .section-header.stylish .section-title {
-    width: 68%;
-    font-weight: 500;
+    width: 66%;
+    font-weight: 450;
     margin: 0 8px 10px 8px;
-    font-size: 4.5rem;
+    font-size: 4rem;
     letter-spacing: .7px;
 }
 
@@ -1762,16 +1779,17 @@ div {
 
 .marker-highlight {
     padding: 0px 20px;
+    font-weight: 600;
     background-color: var(--bg-icon-color);
     color: var(--text-color) !important;
 }
 
 .section-header.large {
-    margin: 19% 0.5em 0.2em 0.2em;
+    margin: 7% 0.5em 0.2em 0.2em;
 }
 .section-header.large .section-title {
     font-size: clamp(3rem, -3rem + 16vw, 10rem) !important;
-    font-weight: 600;
+    font-weight:450;
 }
 .section-header.large.no-pt {
     margin-top: 1.2%;
@@ -1802,7 +1820,7 @@ div {
 
 .section-desc, .section-header p {
     font-size: 1rem;
-    line-height: 29px;
+    line-height: var(--spacing-2);
     margin: 0px 32px 30px 32px;
 }
 
@@ -1816,13 +1834,44 @@ div {
 
 .hero-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: -5%;
-    height: 100vh;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
 }
-
+.hero-top, .hero-center, .hero-bottom {
+    position: relative;
+    width: 100%;
+}
+.hero-top {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 80px 7em 40px 7em;
+    max-width: 86%;
+}
+.hero-top h1 {
+    font-weight: 500;
+    font-size: 3.5rem;
+}
+.hero-top h2 {
+    font-weight: 450;
+    font-size: 22px;
+}
+.hero-center {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+}
+.hero-center img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    width: 500px; height: 600px;
+}
+.hero-bottom-content {
+    position: absolute;
+    bottom: 0 !important;
+    left: 0; right: 0;
+}
 .hero-caption {
     display: flex;
     flex-direction: column;
@@ -1834,13 +1883,12 @@ div {
     font-size: 4rem;
     font-weight: 600;
     line-height: 1.1em;
-    max-width: 85%;
     font-family: Manrope, sans-serif;
 }
 
 .hero-section p {
     font-size: 16px;
-    line-height: 26px;
+    line-height: var(--spacing-2);
     width: 50%;
     font-family: Inter, sans-serif;
 }
@@ -1966,13 +2014,6 @@ div {
     .section-title {
         font-size: 4.5rem;
     }
-    .hero-section .role {
-        font-size: 4rem;
-    }
-    .hero-section p {
-        font-size: 21px;
-        line-height: 38px;
-    }
 }
 
 @media (max-width: 1024px) {
@@ -1980,16 +2021,24 @@ div {
         display: none !important;
     }
 
-    .hero-section {
-        margin: 40px 0;
-        padding: 0 20px;
+    .hero-top {
+        max-width: 100%;
+        padding: 20px 20px;
     }
 
-    .hero-section .role {
+    .hero-top h1 {
         width: 100%;
-        font-size: 2rem;
+        font-weight: 500;
+        font-size: 2.5rem;
     }
 
+    .hero-top h2 {
+        font-size: 20px;
+    }
+    .btn.xl {
+        padding: 12px 20px;
+        font-size: 20px;
+    }
     .hero-section p {
         font-size: 14px;
         width: 100%;
@@ -2046,7 +2095,6 @@ div {
 }
 
 .cards p {
-    line-height: normal !important;
     font-size: 14px !important;
     color: var(--text-color) !important;
 }
@@ -2089,7 +2137,7 @@ div {
 .card-desc p {
     margin: 5px 0 18px 0;
     font-size: 13.5px;
-    line-height: 20px;
+    line-height: var(--spacing-2);
 }
 
 .card-desc .btn {
@@ -2151,9 +2199,6 @@ div {
 .flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-width: 100% !important;
     gap: 24px;
     z-index: 0;
 }
@@ -2329,20 +2374,20 @@ div {
 
 .flex-box .box-content p {
     font-size: 20px;
-    line-height: 32px;
+    line-height: var(--spacing-3);
     font-weight: 300;
 }
 
 .flex-box .box-content .richi-bio {
     font-size: 15px;
     text-align: justify;
-    line-height: 26px;
+    line-height: var(--spacing-2);
     font-weight: 400;
     max-width: 100%;
 }
 
 .flex-box .box-content b {
-    line-height: 24px;
+    line-height: var(--spacing-1);
     font-weight: 700;
 }
 
@@ -2444,7 +2489,7 @@ div {
 
 .flex-box-desc p {
     font-size: 16px;
-    line-height: 24px;
+    line-height: var(--spacing-1);
 }
 
 .modern-flex-box:hover,
@@ -2491,7 +2536,7 @@ div {
     }
     .flex-box .box-content-desc p {
         font-size: 16px;
-        line-height: 26px;
+        line-height: var(--spacing-2);
     }
     .box-content .name {
         margin: 0px 0 0px 0;
@@ -2602,11 +2647,10 @@ div {
 
 .timeline-item {
     width: 100%;
-    padding: 20px 1em;
+    padding: 10px 1em;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
-    text-align: left;
+    align-items: flex-start;
     gap: 3em;
     border-bottom: 2px solid rgba(100, 100, 100, 0.11);
 }
@@ -2620,12 +2664,13 @@ div {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 20px 0;
 }
 
 
 .timeline-item-header h1 {
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 3.3rem;
     width: 100%;
     animation: fadeInDown .4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -2650,7 +2695,6 @@ div {
 .timeline-item-content h1 {
     font-weight: 400;
     font-size: 34px;
-    line-height: 40px;
     animation: fadeInDown .4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -2661,7 +2705,7 @@ div {
 }
 
 .timeline-item-content p {
-    line-height: 29px;
+    line-height: var(--spacing-2);
     animation: fadeInDown .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 /* ---- */
@@ -2825,7 +2869,7 @@ div {
 .people .people-bio p {
     font-family: Inter, sans-serif;
     font-size: 16px;
-    line-height: 26px;
+    line-height: var(--spacing-2);
     overflow: hidden;
     max-height: calc(2em * 5);
     display: none;
@@ -2996,7 +3040,7 @@ div {
     font-size: 15px;
     text-align: left;
     padding: 0 0px;
-    line-height: 24px;
+    line-height: var(--spacing-1);
     font-weight: 400;
 }
 
@@ -3111,11 +3155,12 @@ div {
 .panel {
     position: relative;
     padding: 20px 26px;
-    width: 300px;
+    width: 320px;
     min-height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
+    gap: 30px;
     border-radius: 30px;
     transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
     background-color: rgba(100, 100, 100, 0.05);
@@ -3139,8 +3184,9 @@ div {
 
 .panel p {
     transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 500;
     font-family: Inter, sans-serif;
 }
 
@@ -3149,7 +3195,6 @@ div {
     justify-content: center;
     align-items: center;
     gap: 0px;
-    margin: 24px 0;
 }
 
 .panel-image div {
@@ -3746,7 +3791,6 @@ input[type=range]::-moz-range-track {
     position: relative;
     width: 100vw;
     height: 100vh;
-    margin-top: -7.1% !important;
     overflow: hidden;
 }
 
@@ -4677,6 +4721,10 @@ header * {
     flex-wrap: nowrap;
 }
 
+.flex.center {
+    justify-content: center;
+}
+
 .scroll-progress {
     position: fixed;
     top: 0;
@@ -5265,7 +5313,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 .side-panel p {
     font-family: Inter, sans-serif;
     font-size: 16px;
-    line-height: 27px;
+    line-height: var(--spacing-2);
     font-weight: 450;
     margin: 0;
 }
@@ -6109,7 +6157,7 @@ footer a:hover {
 
 .footer-column p {
     margin: 0 !important;
-    line-height: 24px;
+    line-height: var(--spacing-1);
     font-family: "Open Sans";
 }
 
@@ -6195,9 +6243,6 @@ footer a:hover {
     }
     .toggleTheme {
         font-size: 2rem;
-    }
-    .flex {
-        justify-content: center !important;
     }
     .hero-section .role {
         max-width: 100%;

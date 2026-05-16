@@ -50,7 +50,7 @@ a {
 }
 
 .video-container {
-    transform: scale(0.7);
+    padding: 0px 120px;
     transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     will-change: transform;
     backface-visibility: hidden;

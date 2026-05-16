@@ -151,7 +151,7 @@ fetch(url).then(response => response.text()).then(html => {
             menuAnimationDuration = 0;
             navPaneAnimDuration = 4;
         } else {
-            menuAnimationDuration = 400;
+            menuAnimationDuration = 550;
             navPaneAnimDuration = 9;
         }
     })
@@ -194,13 +194,13 @@ fetch(url).then(response => response.text()).then(html => {
         btn.classList.add('active');
         
         // for mobile, fix a bug when sometimes these animation duration are still same as desktop's default value. 
-    if (window.innerWidth <= 768) {
-        menuAnimationDuration = 50;
-        navPaneAnimDuration = 4;
-    } else {
-        menuAnimationDuration = 400;
-        navPaneAnimDuration = 6;
-    }
+        if (window.innerWidth <= 768) {
+            menuAnimationDuration = 50;
+            navPaneAnimDuration = 4;
+        } else {
+            menuAnimationDuration = 550;
+            navPaneAnimDuration = 9;
+        }
         
         requestAnimationFrame(() => { 
             navpane.style.animation = `fadeInUpSmooth .${navPaneAnimDuration}s cubic-bezier(0.475, 0.12, 0.165, 1)`;
@@ -470,6 +470,69 @@ if (inputsType.length > 0) {
         input.addEventListener('input', bindColor);
     })
 }
+const useDaylightModeCbx = document.getElementById("useDaylightModeCbx");
+const daylightState = localStorage.getItem('dayLightChecked') === 'true';
+
+
+if (daylightState) {
+    useDaylightModeCbx.checked = true;
+    
+    preciseInterval();
+    checkUpdateMode();
+    
+} else {
+    useDaylightModeCbx.checked = false;
+   
+
+}
+
+let intervalId;
+
+function checkUpdateMode() {
+    const time =  new Date();
+    let hour = time.getHours();
+    const isNight = hour >= 18 || hour < 7;
+
+    if (isNight) {
+        document.body.classList.add('dark-mode');    
+    } else {
+        document.body.classList.remove('dark-mode');
+    }
+}
+
+// Function to precise the theme change interval
+function preciseInterval() {
+    const now = new Date();
+    const secToNextMin = 60 - now.getSeconds();
+
+    setTimeout(() => {
+        checkUpdateMode();
+        intervalId = setInterval(checkUpdateMode, 50 * 60);
+    }, secToNextMin * 10)
+}
+
+useDaylightModeCbx.addEventListener("change", () => {
+    if (useDaylightModeCbx.checked) {
+        localStorage.setItem("dayLightChecked", "true");
+        useDaylightModeCbx.checked = true;
+
+        if (!intervalId) {
+            preciseInterval();
+        }
+
+        checkUpdateMode();
+    } else {
+        localStorage.setItem("dayLightChecked", "false");
+        useDaylightModeCbx.checked = false;
+
+        if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+        }
+
+        checkUpdateMode();
+    }
+});
 const panels = document.querySelectorAll('.panel');
 const themes = ["default", "mono", "sarah-olive", "nia-charm"];
 
@@ -546,6 +609,30 @@ document.addEventListener('DOMContentLoaded', () => {
 selectLang.addEventListener('change', (e) => {
     console.log('changed:', e.target.value)
     setLang(e.target.value);
+})
+
+const line = document.getElementById('line-spacing');
+document.body.classList.remove('narrow-spacing', 'normal-spacing', 'wide-spacing')
+
+line.addEventListener('change', () => {
+    if (line.value === "narrow") {
+        document.body.classList.add('narrow-spacing');
+        document.body.classList.remove('normal-spacing');
+        document.body.classList.remove('wide-spacing');
+    }
+    else if (line.value === "normal") {
+        document.body.classList.remove('narrow-spacing');
+        document.body.classList.add('normal-spacing');
+        document.body.classList.remove('wide-spacing');
+    } else if (line.value === "wide") {
+        document.body.classList.remove('narrow-spacing');
+        document.body.classList.remove('normal-spacing');
+        document.body.classList.add('wide-spacing');
+    } else {
+        document.body.classList.remove('narrow-spacing');
+        document.body.classList.add('normal-spacing');
+        document.body.classList.remove('wide-spacing');
+    }
 })
 
 })

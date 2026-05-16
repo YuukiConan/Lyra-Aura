@@ -1,15 +1,9 @@
 {
-    "welcome": "Tingkatkan Ruang Anda dengan Desain Khas Richi!",
+    "hero-section-intro-desc": "Kami memadukan keanggunan struktural desain interior dan tren mode terkini, dipadukan dengan semangat seni yang berani dan dinamis. Temukan proyek-proyek pilihan yang menghidupkan gaya hidup merek Anda.",
     "home": "Beranda",
-    "team": "Tim",
-    "course": "Kursus",
-    "contact-me": "Kontak saya!",
-    "settings": "Pengaturan",
-    "general": "Umum",
-    "about": "Tentang web ini",
-    "experimental": "Fitur eksperimental",
-    "acc-text-1": "Tema web &bull; animasi &bull; warna aksen &bull; Mode Baca",
-    "acc-text-2": "Nomor versi &bull; Lisensi",
-    "acc-text-3": "Fitur eksperimental untuk pengembang.",
-    "settings-warning": "Peringatan: Halaman ini tidak stabil karena semua fitur atau interaksi belum berfungsi dengan baik."
+    "header-navbtn-text-1": "Buat",
+    "header-navbtn-text-2": "Blog",
+    "header-navbtn-text-3": "Tentang",
+    "header-navbtn-text-4": "Karir",
+    "settings": "Pengaturan"
 }

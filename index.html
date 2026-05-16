@@ -82,11 +82,11 @@
         
         lenis.on('scroll', (e) => {
             const pos = document.documentElement.scrollTop;
-            const threshold = 200;
-            const minPadding = 1.0;
-            const maxPadding = 0.7;
+            const threshold = 0;
+            const minPadding = 0;
+            const maxPadding = 120;
             const minRadius = 0;
-            const maxRadius = 46;
+            const maxRadius = 56;
             const video = document.querySelector('.video-container');
             const videoEl = document.querySelector('.video-container .video');
 
@@ -94,55 +94,48 @@
                 let scrollRatio = Math.max(minPadding, maxPadding - (pos - threshold) * 0.2);
                 let radiusRatio = Math.max(minRadius, maxRadius - (pos - threshold) * 0.2);
     
-                video.style.transform = `scale(${scrollRatio})`
+                video.style.padding = `${scrollRatio}px`
+                video.style.paddingTop = '0px';
+            video.style.paddingBottom = '0px';
                 videoEl.style.borderRadius = `${radiusRatio}px`
             } else {
-                video.style.transform = `scale(${maxPadding})`
+                video.style.padding = `${maxPadding}px`
+                video.style.paddingTop = '0px';
+            video.style.paddingBottom = '0px';
                 videoEl.style.borderRadius = `${maxRadius}px`
             }
 
             if (window.innerWidth < 600) {
-                video.style.transform = `scale(1.0)`;
+                video.style.padding = `0px`;
+                video.style.paddingTop = '0px';
+            video.style.paddingBottom = '0px';
                 videoEl.style.borderRadius = `0px`
             }
         });
     </script>
 </head>
-<dialog id="myDialog">
-    <div class="dialog-header">
-        <div><h1>This is a beta version of Lyra</h1></div>
-        <div class="dialog-btns">
-            <button class="btn empty close-btn" id="close"><span class="div-1"></span><span class="div-2"></span></button>
-        </div>
-    </div>
-    <div class="content">
-        <p>This build of Lyra is unofficial and may contain bugs or unfinished features. By clicking “Close,” you agree to Lyra's <a href="./privacy_policy.html" tabindex="-1">Privacy Policy</a> and <a href="./terms.html">Terms of Service</a>.</p>
-    </div>
-    <div class="flex nowrap">
-        <input type="checkbox" aria-label="Don't show this message again checkbox" class="checkbox" id="disable-early-message" />
-        <label for="disable-early-message" aria-label="Don't show this message again label">Jangan tampilkan dialog ini lagi.</label>
-    </div>
-</dialog>
 <body >
-    <header class="header"></header>
+    <header></header>
     <main>
         <section class="section desc intro" id="home">
             <div class="hero-section">
-                <div class="hero-caption">
-                    <h1 class="role" data-lang="welcome">We design thoughtful, livable spaces that feel close to you<span class="highlight"></span></h1>
-                    <p>An interior design, fashion, and graphic design agency that prioritizes function and aesthetics to create comfortable results.</p>
+                <div class="hero-top">
+                    <h1>Think. Design. <span class="marker-highlight">Be Success</span></h1>
+                    <h2 data-lang="hero-section-intro-desc">We fuse the structural elegance of interior design, modern fashion, combining with the bold and dynamic pulse of art. Discover a curated projects where your brand's lifestyle is brought to life. </h2>
                     <br> 
                     <div class="flex">
-                        <button class="btn xl outline">Our projects<i class="lni lni-arrow-angular-top-right"></i></button>
+                        <a href="/build.html"><button class="btn xl outline">Our projects<i class="lni lni-arrow-angular-top-right"></i></button></a>
                         <button class="btn xl empty">Join with us<i class="lni lni-arrow-angular-top-right"></i></button>
                     </div>
                 </div>
-            </div>
-            <div class="video-container">
-                <video class="video" muted loop autoplay preload="metadata" fetchpriority="high" poster="./assets/video/demo-frame-01.png">
-                    <source src="./assets/video/demo.mp4" type="video/mp4">
-                    Your browser doesn't support video container.
-                </video>
+                <div class="hero-bottom">
+                    <div class="video-container">
+                        <video class="video" muted loop autoplay preload="metadata" fetchpriority="high" poster="./assets/video/demo-frame-01.png">
+                            <source src="./assets/video/demo.mp4" type="video/mp4">
+                            Your browser doesn't support video container.
+                        </video>
+                    </div>
+                </div>
             </div>
             <div class="section-content powered-by">
                 <div class="marquee">
@@ -324,7 +317,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="flex"><button class="btn xl outline">Lihat proyek lainnya<i class="lni lni-arrow-angular-top-right"></i></button></div>                
+                    <div class="flex center"><button class="btn xl outline">Lihat proyek lainnya<i class="lni lni-arrow-angular-top-right"></i></button></div>                
                 </div>
             </div>
         </section>

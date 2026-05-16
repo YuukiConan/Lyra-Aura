@@ -6,33 +6,6 @@ const peopleImg = document.querySelectorAll(".people .people-img img");
 peopleImg.forEach((e) => {
     e.setAttribute("fetchpriotity", "low");
 });
-const dialogBetaWarning = document.getElementById("myDialog"),
-disableMsg = document.getElementById("disable-early-message"),
-isDisabled = "true" === localStorage.getItem("disable-warning"),
-dialogClose = document.getElementById("close");
-
-document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => {
-        isDisabled ? dialogBetaWarning.close() : dialogBetaWarning.showModal();
-    }, 1e3);
-});
-disableMsg.addEventListener("change", () => {
-    disableMsg.checked ? localStorage.setItem("disable-warning", "true") : localStorage.setItem("disable-warning", "false");
-});
-dialogClose.addEventListener("click", () => {
-    requestAnimationFrame(() => {
-        dialogBetaWarning.style.animation = "fadeOut .8s cubic-bezier(0.075, 0.82, 0.165, 1)";
-        dialogBetaWarning.addEventListener("animationend", () => {
-        dialogBetaWarning.close();
-        dialogBetaWarning.style.animation.includes("windows8ScaleOut");
-    });
-});
-disableMsg.addEventListener("change", () => {
-    disableMsg.checked
-    ? localStorage.setItem("disable-warning", "true")
-    : localStorage.setItem("disable-warning", "false");
-});
-});
 
 const labelTags = document.querySelectorAll(".people .labelTag"),
 now = new Date(),

@@ -6,13 +6,6 @@ const security = Security ? new Security('1.1', "Keyza Richi") : null;
 
 richi.setHeadTagType("icon", "/assets/logo/lyra.png");
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then(reg => console.log('Service Worker registered!', reg))
-      .catch(err => console.log('Service Worker registration failed:', err));
-  });
-}
 
 
 document.addEventListener('DOMContentLoaded', () => {
