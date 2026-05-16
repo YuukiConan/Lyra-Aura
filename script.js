@@ -4,7 +4,7 @@ import Rave, { Security } from "./Rave/js/Rave.js";
 const richi = Rave ? new Rave("UI Minimalist", "keyzarichi.org") : null;
 const security = Security ? new Security('1.1', "Keyza Richi") : null;
 
-richi.setHeadTagType("icon", "./assets/logo/Lyra_simple.webp");
+richi.setHeadTagType("icon", "/assets/logo/lyra.png");
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -13,7 +13,6 @@ if ('serviceWorker' in navigator) {
       .catch(err => console.log('Service Worker registration failed:', err));
   });
 }
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
