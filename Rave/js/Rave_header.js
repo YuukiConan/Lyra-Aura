@@ -228,9 +228,11 @@ fetch(url).then(response => response.text()).then(html => {
         if (isAnimating) return;
         isAnimating = true;
         btn.classList.add('no-pointer');
+        let noPointerDelay = 600;
         if (window.innerWidth <= 768) {
             menuAnimationDuration = 300;
             navPaneAnimDuration = 3;
+            noPointerDelay = 250;
         }
         
         requestAnimationFrame(() => {
@@ -261,7 +263,7 @@ fetch(url).then(response => response.text()).then(html => {
                     header.classList.remove('no-blend');
                     setTimeout(() => {
                         btn.classList.remove('no-pointer');
-                    }, 600) 
+                    }, noPointerDelay) 
                 }
             }, {once: true});
         });
