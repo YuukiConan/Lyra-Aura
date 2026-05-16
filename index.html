@@ -83,8 +83,8 @@
         lenis.on('scroll', (e) => {
             const pos = document.documentElement.scrollTop;
             const threshold = 200;
-            const minPadding = 0;
-            const maxPadding = 100;
+            const minPadding = 1.0;
+            const maxPadding = 0.7;
             const minRadius = 0;
             const maxRadius = 46;
             const video = document.querySelector('.video-container');
@@ -94,15 +94,15 @@
                 let scrollRatio = Math.max(minPadding, maxPadding - (pos - threshold) * 0.2);
                 let radiusRatio = Math.max(minRadius, maxRadius - (pos - threshold) * 0.2);
     
-                video.style.padding = `${scrollRatio}px`
+                video.style.transform = `scale(${scrollRatio})`
                 videoEl.style.borderRadius = `${radiusRatio}px`
             } else {
-                video.style.padding = `${maxPadding}px`
+                video.style.transform = `scale(${maxPadding})`
                 videoEl.style.borderRadius = `${maxRadius}px`
             }
 
             if (window.innerWidth < 600) {
-                video.style.padding = `0px`;
+                video.style.transform = `scale(1.0)`;
                 videoEl.style.borderRadius = `0px`
             }
         });
@@ -125,21 +125,19 @@
 </dialog>
 <body >
     <header class="header"></header>
-    <main id="scroll">
+    <main>
         <section class="section desc intro" id="home">
-            <section class="hero">
-                <div class="hero-section">
-                    <div class="hero-caption">
-                        <h1 class="role" data-lang="welcome">We design thoughtful, livable spaces that feel close to you<span class="highlight"></span></h1>
-                        <p>An interior design, fashion, and graphic design agency that prioritizes function and aesthetics to create comfortable results.</p>
-                        <br> 
-                        <div class="flex">
-                            <button class="btn xl outline">Our projects<i class="lni lni-arrow-angular-top-right"></i></button>
-                            <button class="btn xl empty">Join with us<i class="lni lni-arrow-angular-top-right"></i></button>
-                        </div>
+            <div class="hero-section">
+                <div class="hero-caption">
+                    <h1 class="role" data-lang="welcome">We design thoughtful, livable spaces that feel close to you<span class="highlight"></span></h1>
+                    <p>An interior design, fashion, and graphic design agency that prioritizes function and aesthetics to create comfortable results.</p>
+                    <br> 
+                    <div class="flex">
+                        <button class="btn xl outline">Our projects<i class="lni lni-arrow-angular-top-right"></i></button>
+                        <button class="btn xl empty">Join with us<i class="lni lni-arrow-angular-top-right"></i></button>
                     </div>
                 </div>
-            </section>
+            </div>
             <div class="video-container">
                 <video class="video" muted loop autoplay preload="metadata" fetchpriority="high" poster="./assets/video/demo-frame-01.png">
                     <source src="./assets/video/demo.mp4" type="video/mp4">

@@ -457,15 +457,14 @@ html[data-theme="light"] {
 /* General */
 body,
 html {
-    overscroll-behavior: auto !important;
     margin: 0;
-    padding: 0;
     min-height: 100%;
     overflow-y: scroll;
     height: auto;
     scroll-behavior: initial;
-    background-color: var(--background-color) !important;
+    background-color: var(--background-color);
     color: var(--text-color);
+    transition: background-color .3s cubic-bezier(0.075, 0.82, 0.165, 1);
     font-family: Inter, 'DM Sans', sans-serif;
 }
 
@@ -1309,19 +1308,14 @@ code {
     display: inline-flex;
     vertical-align: middle;
     justify-content: center;
-    min-width: 100px;
-    min-height: 40px;
+    font-size: 15px;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     border-radius: 50px;
-    transition: background-color .6s cubic-bezier(0.075, 0.82, 0.165, 1), border-radius .6s cubic-bezier(0.075, 0.82, 0.165, 1), width .5s cubic-bezier(0.075, 0.82, 0.165, 1), transform .5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow .5s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+    transition: background-color .6s cubic-bezier(0.075, 0.82, 0.165, 1), border-radius .6s cubic-bezier(0.075, 0.82, 0.165, 1), width .5s cubic-bezier(0.075, 0.82, 0.165, 1), transform .5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow .5s cubic-bezier(0.075, 0.82, 0.165, 1);
     overflow: hidden;
     box-shadow: none;
-    backface-visibility: hidden;
-    will-change: transform;
-    margin: 0 10px;
     white-space: nowrap;
-    font-family: "Raleway", sans-serif !important;
 }
 
 .btn i {
@@ -1331,7 +1325,6 @@ code {
 }
 
 .btn span {
-    font-family: "Raleway", sans-serif !important;
     transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -1666,7 +1659,6 @@ body.dyslexia :is(p, h1, h2, h3, h4, h5, h6, span, a) {
 
 main,
 #scroll {
-    overflow-x: hidden;
     transition: .7s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -1676,7 +1668,7 @@ div {
 
 .intro {
     position: relative;
-    width: 100%;
+    padding: 0;
     transition: none;
 }
 
@@ -1768,6 +1760,7 @@ div {
 .marker-highlight {
     padding: 0px 20px;
     background-color: var(--bg-icon-color);
+    color: var(--text-color) !important;
 }
 
 .section-header.large {
@@ -1819,7 +1812,12 @@ div {
 }
 
 .hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    margin-top: -5%;
+    height: 100vh;
 }
 
 .hero-caption {
@@ -1827,7 +1825,6 @@ div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: none !important;
 }
 
 .hero-section .role {
@@ -1976,23 +1973,18 @@ div {
 }
 
 @media (max-width: 1024px) {
-    .intro {
-        padding: 3.5em 0 20px 0 !important;
-    }
     .navigation {
         display: none !important;
     }
 
-    .hero {
-        margin: 6em 0 5em 0 !important;
-    }
     .hero-section {
-        padding: 0 25px;
+        margin: 40px 0;
+        padding: 0 20px;
     }
 
     .hero-section .role {
         width: 100%;
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .hero-section p {
@@ -2704,7 +2696,7 @@ div {
 .people-container.rtl {
     grid-template-columns: repeat(2, 1fr); direction: rtl;
     padding-right: 26px;
-    column-gap: 1vw !important;
+    column-gap: 1.6vw !important;
 }
 
 .people-container.rtl .people {
@@ -2732,7 +2724,12 @@ div {
     margin-top: 6em;
     grid-row: span 23;
 }
-
+.people-container .people.expr {
+    margin-left: 7em;
+}
+.people-container.rtl .people.expr {
+    margin-right: 7em;
+}
 .people:hover {
     cursor: pointer;
 }
@@ -2761,7 +2758,7 @@ div {
     object-fit: cover;
     width: 370px;
     height: 100%;
-    object-position: center 15%;
+    object-position: center center;
     background-color: var(--bg-icon-color);
     aspect-ratio: 3/4;
 }
@@ -4710,10 +4707,11 @@ button i,
     left: 0px;
 }
 
-header:has(.nav-pane:not(.hidden)) :is(.product) {
+header:has(.nav-pane:not(.hidden)) :is(.logo) {
     opacity: 0;
+    transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity .5s cubic-bezier(0.075, 0.82, 0.165, 1);
     visibility: hidden;
-    transform: translateY(-30px);
+    transform: scale(0.95);
 }
 header:has(.nav-pane:not(.hidden)) .navigation {
     opacity: 0;
@@ -4754,7 +4752,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     display: flex;
     align-items: center;
     gap: 0.8em;
-    padding: 4px 2px;
+    padding: 4px 8px;
     opacity: 1;
     transition: .5s cubic-bezier(0.075, 0.92, 0.403, 1);
 }
@@ -5094,7 +5092,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     display: flex;
     align-items: center;
     position: relative;
-    gap: 1.2em;
+    gap: 1.5em;
     margin: 0;
 }
 
@@ -5113,7 +5111,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     opacity: 0;
     visibility: hidden;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 22px;
     color: var(--text-color);
     transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1), background-color .6s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -5140,12 +5138,12 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     position: relative;
 }
 #close-panel .div-1 {
-    transform: rotate(45deg) translate(10px, 0px);
-    top: -10px;
+    transform: rotate(45deg) translate(11px, 0px);
+    top: -8px;
 }
 #close-panel .div-2 {
-    transform: rotate(-45deg) translate(-10px, -0px);
-    top: -10px;
+    transform: rotate(-45deg) translate(-11.2px, -0px);
+    top: -8.1px;
 }
 .side-panel::-webkit-scrollbar {
     width: 0px;
@@ -5196,6 +5194,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 }
 .people-info.alt .social-media {
     margin: 0;
+    gap: 30px;
     padding: 20px 0;
     flex-direction: row;
 }
@@ -5204,8 +5203,6 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(100, 100, 100, 0.3);
-    padding-bottom: 16px;
 }
 .people-info.alt .name h2 {
     font-size: 28px;
@@ -5231,8 +5228,8 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 .side-panel .name h2 {
     color: var(--text-color);
     font-size: 28px;
-    font-family: Manrope, sans-serif !important;
-    font-weight: 600;
+    font-family: Inter, sans-serif !important;
+    font-weight: 500;
 }
 
 .side-panel .nickname {
@@ -5364,7 +5361,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     top: 0px;
     background-color: white;
     filter: invert(1);
-    transition: all .4s cubic-bezier(1, 0, 0, 1);
+    transition: transform .4s cubic-bezier(1, 0, 0, 1);
 }
 
 .equal .div1 {
@@ -5459,11 +5456,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 /* NavPane */
 .nav-pane {
     position: fixed;
-    top: 0px;
-    left: 0;
-    right: 0px;
-    bottom: 0px;
-    height: 100vh;
+    inset: 0;
     z-index: 2;
     background-color: var(--surface-color);
 }
@@ -5643,16 +5636,16 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 }
 
 .toggleTheme {
-    min-width: 0px !important;
-    min-height: 0px;
-    margin: 0 20px 0 0;
-    padding: 8px 16px !important;  
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    padding: 8px;  
 }
 .chat {
     position: relative;
     border: none;
-    top: 3px;
-    padding: 12px 24px;
+    padding: 10px 24px;
 }
 
 .toggleTheme:hover,
@@ -5749,7 +5742,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto;
+    margin-bottom: auto;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -5766,7 +5759,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
 }
 
 .navpane-footer-actions i {
-    font-size: 1.5rem !important;
+    font-size: 1.8rem !important;
 }
 
 .nav-pane .footer.fade-in {
@@ -5881,6 +5874,7 @@ header:has(.nav-pane:not(.hidden)) .navigation {
         gap: 12px;
         padding: 10px 30px 20px 30px;
     }
+
     header:has(.nav-pane:not(.hidden)) :is(.product, .logo) {
         opacity: 0;
         transform: translateY(0px) !important;
@@ -5913,7 +5907,17 @@ header:has(.nav-pane:not(.hidden)) .navigation {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+    .nav-pane .chat {
+        display: none;
+    }
+    .nav-pane .footer .chat-alt {
+        box-sizing: border-box;
+        position:relative;
+        display: flex;
+        margin: 0;
+        width: 88dvw !important;
+        max-width: none !important;
+    }
 }
 
 
@@ -6119,6 +6123,16 @@ footer a:hover {
     }
 }
 @media (max-width: 1024px) {
+    .toggleTheme {
+        color: inherit;
+        font-size: 2rem;
+    }
+    .people-container .people.expr {
+        margin-left: 2em;
+    }
+    .people-container.rtl .people.expr {
+        margin-right: 2em;
+    }
     .timeline {
         padding: 20px 0px;
     }
@@ -6167,11 +6181,7 @@ footer a:hover {
     .timeline-sub-item {
         padding: 10px 10px;
     }
-    
-    
-    .intro {
-        padding: 5em 0 20px 0 !important;
-    }
+
     .header-container {
         padding: 6px 0em 6px 0em;
     }
@@ -6184,18 +6194,12 @@ footer a:hover {
     .toggleTheme {
         font-size: 2rem;
     }
-    .hero {
-        margin: 1em 0 3em 0 !important;
-    }
-    .hero-section {
-        padding: 0 25px;
-    }
     .flex {
         justify-content: center !important;
     }
     .hero-section .role {
         max-width: 100%;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .hero-section p {
@@ -6273,6 +6277,12 @@ footer a:hover {
         grid-row: unset;
         margin-top: 0;
     }
+    .people-container .people.expr {
+        margin-left: 0;
+    }
+    .people-container.rtl .people.expr {
+        margin-right: 0;
+    }
     .people .name {
         width: 100%;
     }
@@ -6281,7 +6291,7 @@ footer a:hover {
     }
     .people .nickname {
         font-size: 23px !important;
-        positive: relative; top: 1px;
+        position: relative; top: 1px;
     }
     .people .people-img {
         height: 450px;
@@ -6381,17 +6391,6 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-    .nav-pane .chat {
-        display: none;
-    }
-    .nav-pane .footer .chat-alt {
-        box-sizing: border-box;
-        position:relative;
-        display: flex;
-        margin: 0;
-        width: 88dvw !important;
-        max-width: none !important;
-    }
     .logo {
         position: relative;
         left: -6px;
