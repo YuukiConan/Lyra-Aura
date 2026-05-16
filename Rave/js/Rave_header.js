@@ -148,22 +148,13 @@ fetch(url).then(response => response.text()).then(html => {
     // for desktop, fix a bug when these animation duration aren't set to expected value unless you resizing the window's width less than or equal to 768px and refresh the page.
     window.addEventListener('resize', () => {
         if (window.innerWidth <= 768) {
-            menuAnimationDuration = 200;
-            navPaneAnimDuration = 3;
+            menuAnimationDuration = 0;
+            navPaneAnimDuration = 4;
         } else {
-            menuAnimationDuration = 550;
+            menuAnimationDuration = 400;
             navPaneAnimDuration = 9;
         }
     })
-
-    // for mobile, fix a bug when sometimes these animation duration are still same as desktop's default value. 
-    if (window.innerWidth <= 768) {
-        menuAnimationDuration = 200;
-        navPaneAnimDuration = 3;
-    } else {
-        menuAnimationDuration = 550;
-        navPaneAnimDuration = 9;
-    }
 
     menuButtons.forEach(btn => {
         const targetItemClass = btn.id + "-item";
@@ -201,6 +192,15 @@ fetch(url).then(response => response.text()).then(html => {
         brand.classList.add('fade-in');
         header.classList.add('no-blend');
         btn.classList.add('active');
+        
+        // for mobile, fix a bug when sometimes these animation duration are still same as desktop's default value. 
+    if (window.innerWidth <= 768) {
+        menuAnimationDuration = 50;
+        navPaneAnimDuration = 4;
+    } else {
+        menuAnimationDuration = 400;
+        navPaneAnimDuration = 6;
+    }
         
         requestAnimationFrame(() => { 
             navpane.style.animation = `fadeInUpSmooth .${navPaneAnimDuration}s cubic-bezier(0.475, 0.12, 0.165, 1)`;
