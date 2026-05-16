@@ -3,8 +3,8 @@
   "name": "Lyra Aura - We Design, You Shine",
   "icons": [
     {
-      "src": "/assets/logo/lyra.webp",
-      "type": "image/webp",
+      "src": "/assets/logo/lyra.png",
+      "type": "image/png",
       "sizes": "500x500",
       "purpose": "maskable"
     }
