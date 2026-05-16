@@ -89,7 +89,7 @@
                 </div>
                 <div class="navpane-footer-actions">
                     <button class="btn accent chat">Talk to Lyra<i class="lni lni-arrow-angular-top-right"></i></button>
-                    <button id="labs" class="btn outline"><i class="uil uil-wheelchair" ></i>Accesibility</button>
+                    <button id="labs" class="btn outline"><i class="uil uil-wheelchair" ></i>Accessibility</button>
                 </div>
             </div>
             <div>
@@ -101,7 +101,7 @@
 <dialog id="float-menu" data-lenis-prevent>
     <div class="dialog-header">
         <div>
-            <h1 class="dialog-mintopbar">Settings</h1>
+            <h1 class="dialog-mintopbar">Accessibility</h1>
         </div>
         <div class="dialog-btns">
             <button class="btn empty close-btn" id="close2"><span class="div-1"></span><span class="div-2"></span></button>
@@ -109,25 +109,24 @@
     </div>
     <div class="content" id="content">
         <div class="dialog-topbar">
-            <h1>Settings</h1>
+            <h1>Accessibility</h1>
         </div>
-        <h1 class="dialog-divider">Aksesibilitas</h1>
         <div class="accordion-item">
-            <h5 class="accordion-item-title">Kurangi animasi<br><span class="accordion-item-desc">Kurangi gerakan animasi dan transisi jika Anda sensitif dengan gerakan tertentu atau untuk meningkatkan performa web.</span></h5> 
+            <h5 class="accordion-item-title">Reduce motion<br><span class="accordion-item-desc">Reduce animation and transition movements if you are sensitive to certain movements or to improve web performance.</span></h5> 
             <label class="toggle">
                 <input type="checkbox" class="toggleCheckbox" id="dsbAnimCbx" />
                 <span class="slider"></span>
             </label>
         </div>
         <div class="accordion-item hidden">
-            <h5 class="accordion-item-title">Aktifkan kontras tinggi</h5> 
+            <h5 class="accordion-item-title">High Contrast</h5> 
             <label class="toggle">
                 <input type="checkbox" class="toggleCheckbox" id="contrastCbx" />
                 <span class="slider"></span>
             </label>
         </div>
         <div class="accordion-item">
-            <h5 class="accordion-item-title">Font dyslexia</h5> 
+            <h5 class="accordion-item-title">Dyslexia font</h5> 
             <label class="toggle">
                 <input type="checkbox" class="toggleCheckbox" id="dyslexiaCbx" />
                 <span class="slider"></span>
@@ -144,26 +143,27 @@
             </datalist>
         </div>
         <div class="accordion-item">
-            <h5 class="accordion-item-title full">Rave Web Themer <br><span class="accordion-item-desc">Gunakan warna dinamis Web Themer untuk memperindah web berdasarkan warna aksen yang dipilih <br>
+            <h5 class="accordion-item-title full">Rave Web Themer <br><span class="accordion-item-desc"></span>
+            
             <div class="color-template">
                 <div class="flex">
-                    <div class="panel selected" data-theme="default">
+                    <div class="panel" data-theme="default">
                         <h1>Gold Luxury</h1>
                         <div class="panel-image gold-luxury">
                             <div class="primary"></div>
                             <div class="secondary"></div>
                             <div class="tertiary"></div>
                         </div>
-                        <p>Warna emas mewah yang lembut, merupakan warna default Lyra Aura</p>
+                        <p>A luxurious gold color that is soft and elegant, especially when dark mode is active.</p>
                     </div>
-                    <div class="panel" data-theme="mono">
+                    <div class="panel selected" data-theme="mono">
                         <h1>Mono</h1>
                         <div class="panel-image mono">
                             <div class="primary"></div>
                             <div class="secondary"></div>
                             <div class="tertiary"></div>
                         </div>
-                        <p>Warna monokrom (hitam dan putih) yang memberikan kesan minimalis dan modern untuk sebagian besar website.</p>
+                        <p>Monochrome colors (black and white) which give a minimalist and modern impression to most websites.</p>
                     </div>
                     <div class="panel" data-theme="sarah-olive">
                         <h1>Sarah Olive</h1>
@@ -172,7 +172,7 @@
                             <div class="secondary"></div>
                             <div class="tertiary"></div>
                         </div>
-                        <p></p>
+                        <p>The olive color with a mix of pink is suitable to give the impression as if visitors are in nature. </p>
                     </div>
                     <div class="panel" data-theme="nia-charm">
                         <h1>Charm of Nia</h1>
@@ -181,10 +181,9 @@
                             <div class="secondary"></div>
                             <div class="tertiary"></div>
                         </div>
-                        <p></p>
+                        <p>A soft, calming, and stable shade of brown with a hint of maroon. Perfect for reading content or adding an elegant touch to a website. </p>
                     </div>
                 </div>
-                
             </div>
         </div>
         <div class="accordion-item hidden">
@@ -201,7 +200,7 @@
                 <span class="slider"></span>
             </label>
         </div>
-        <h1 class="dialog-divider">Eksperimental</h1>
+        <h1 class="dialog-divider">Labs</h1>
         <div class="accordion-item hidden">
             <h5 class="accordion-item-title">Switch tema terang/gelap berdasarkan zona waktu.</h5> 
             <label class="toggle">
@@ -210,14 +209,14 @@
             </label>
         </div>
         <div class="accordion-item">
-            <h5 class="accordion-item-title">Mode Minimalist<br><span class="accordion-item-desc">Gunakan warna monokrom dan desain web yang minimalis.</span></h5> 
+            <h5 class="accordion-item-title">Mode Minimalist<br><span class="accordion-item-desc">Use monochrome colors and minimalist web design.</span></h5> 
             <label class="toggle">
                 <input type="checkbox" class="toggleCheckbox" id="monochromeCbx" />
                 <span class="slider"></span>
             </label>
         </div>
         <div class="accordion-item">
-            <h5 class="accordion-item-title">Bahasa tampilan</h5> 
+            <h5 class="accordion-item-title">Language</h5> 
             <select class="color-picker-select" id="select-lang" >
                 <option value="id">Bahasa Indonesia</option>
                 <option value="en">English</option>
