@@ -588,7 +588,6 @@ function applyLang(text) {
 }
 
 async function setLang(lang) {
-    console.log('settings:', lang)
     try {
         const translate = await loadLanguage(lang);
         applyLang(translate);
@@ -606,12 +605,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     setLang(lang);
     selectLang.value = lang;
+    document.documentElement.lang = lang;
 })
 
 
 selectLang.addEventListener('change', (e) => {
     console.log('changed:', e.target.value)
     setLang(e.target.value);
+    document.documentElement.lang = e.target.value;
 })
 
 const line = document.getElementById('line-spacing');
