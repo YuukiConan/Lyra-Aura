@@ -472,16 +472,17 @@ if (inputsType.length > 0) {
 }
 const useDaylightModeCbx = document.getElementById("useDaylightModeCbx");
 const daylightState = localStorage.getItem('dayLightChecked') === 'true';
-
+const toggle = document.querySelector('.toggleTheme');
 
 if (daylightState) {
     useDaylightModeCbx.checked = true;
-    
+    toggle.classList.add('hidden');
     preciseInterval();
     checkUpdateMode();
     
 } else {
     useDaylightModeCbx.checked = false;
+    toggle.classList.remove('hidden');
    
 
 }
@@ -494,9 +495,9 @@ function checkUpdateMode() {
     const isNight = hour >= 18 || hour < 7;
 
     if (isNight) {
-        document.body.classList.add('dark-mode');    
+        document.documentElement.classList.add('dark-mode');    
     } else {
-        document.body.classList.remove('dark-mode');
+        document.documentElement.classList.remove('dark-mode');
     }
 }
 
@@ -515,6 +516,7 @@ useDaylightModeCbx.addEventListener("change", () => {
     if (useDaylightModeCbx.checked) {
         localStorage.setItem("dayLightChecked", "true");
         useDaylightModeCbx.checked = true;
+        toggle.classList.add('hidden');
 
         if (!intervalId) {
             preciseInterval();
@@ -524,6 +526,7 @@ useDaylightModeCbx.addEventListener("change", () => {
     } else {
         localStorage.setItem("dayLightChecked", "false");
         useDaylightModeCbx.checked = false;
+        toggle.classList.remove("hidden");
 
         if (intervalId) {
             clearInterval(intervalId);
