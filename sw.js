@@ -3,6 +3,7 @@ const ASSETS = [
    '/',
   '/index.html',
    '/richi_styles.css',
+   '/Rave/CSS/KeyzaRichi-rave_core.css',
    '/script.js'
  ];
 
